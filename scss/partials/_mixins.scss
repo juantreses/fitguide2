@@ -1,0 +1,74 @@
+/* Mixins bij Fitguide2.0 */
+
+// Font
+
+@mixin font(
+  $fontweight: 300,
+  $fontsize: 100%,
+  $fontfamily: $hoofdfont,
+  $fontstyle: normal,
+  $lineheight: 1.6,
+  $textalign: left,
+  $letterspacing: 0
+) {
+  font: {
+    weight: $fontweight;
+    size: $fontsize;
+    family: $fontfamily;
+    style: $fontstyle;
+  }
+  line-height: $lineheight;
+  text-align: $textalign;
+  letter-spacing: $letterspacing;
+}
+
+
+// Flex
+
+
+@mixin flex(
+  $richting: row,
+  $hoofdas: flex-start,
+  $kruisas: flex-start
+) {
+  display: flex;
+  flex-direction: $richting;
+  justify-content: $hoofdas;
+  align-items: $kruisas;
+}
+
+//Pseudo-classes positioning geven
+
+@mixin pseudo(
+  $display: block,
+  $pos: absolute,
+  $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// Background
+
+@mixin background(
+  $backgroundcolor: black,
+  $backgroundimage: '',
+  $backgroundrepeat: no-repeat,
+  $backgroundattachment: fixed) {
+  background: {
+    color: $backgroundcolor;
+    image: $backgroundimage;
+    repeat: $backgroundrepeat;
+    attachment: $backgroundattachment;
+  }
+}
+
+//Placeholder
+
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
