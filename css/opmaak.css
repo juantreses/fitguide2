@@ -73,7 +73,14 @@ img {
   height: 100%;
   object-fit: cover; }
 
-/* Variables bij oefening Fotografie */
+/* Variables bij fitguide2.0 */
 /* Mixins bij Fitguide2.0 */
+nav.mainnav {
+  background: white;
+  display: flex;
+  justify-content: center; }
+  nav.mainnav img {
+    width: 80px;
+    height: 80px; }
 
 /*# sourceMappingURL=opmaak.css.map */

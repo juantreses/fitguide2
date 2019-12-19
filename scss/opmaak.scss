@@ -2,3 +2,15 @@
 @import "partials/reset", "partials/variables", "partials/mixins",
 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600,700&display=swap';
+
+nav.mainnav {
+  background: $wit;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
+

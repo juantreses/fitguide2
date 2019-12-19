@@ -2,9 +2,13 @@
 
 function GetConnection()
 {
-    $dsn = "mysql:host=185.115.218.166;dbname=wdev_joannes";
-    $user = "wdev_joannes";
-    $passwd = "1NatMNYxnTr7";
+    //$dsn = "mysql:host=185.115.218.166;dbname=wdev_joannes";
+    //$user = "wdev_joannes";
+    //$passwd = "1NatMNYxnTr7";
+    $dsn = "mysql:host=localhost;dbname=fitguide";
+    $user = "root";
+    $passwd = "Wh3nP7agu35";
+
 
     $pdo = new PDO($dsn, $user, $passwd);
     return $pdo;

@@ -56,7 +56,6 @@ function PrintNavBar()
 {
     $laatste_deel_url = $_SERVER['SCRIPT_NAME'];
     if ( isset($_SESSION['usr'])) {
-
         $data = GetData("select * from fitguideMenu where men_caption not like 'Login' and men_caption not like 'Registreer' order by men_order");
 
         foreach( $data as $r => $row )
@@ -68,15 +67,25 @@ function PrintNavBar()
             }
             else
             {
+
                 $data[$r]['active'] = '';
                 $data[$r]['sr_only'] = '';
             }
         }
 
-        print LoadNestedTemplate("navbar_item", "navbar", $data);
+
+        //template voor 1 item samenvoegen met data voor items
+        $template_navbar_item = LoadTemplate("navbar_item");
+        $navbar_items = ReplaceContent($data, $template_navbar_item);
+
+        //navbar template samenvoegen met resultaat ($navbar_items)
+        $data = array( "navbar_items" => $navbar_items ) ;
+        $template_navbar = LoadTemplate("navbar");
+        print ReplaceContentOneRow($data, $template_navbar);
     }
     else {
         $data = GetData("select * from fitguideMenu where men_caption not like 'Afmelden' order by men_order");
+
 
         foreach( $data as $r => $row )
         {
@@ -87,11 +96,20 @@ function PrintNavBar()
             }
             else
             {
+
                 $data[$r]['active'] = '';
                 $data[$r]['sr_only'] = '';
             }
         }
 
-        LoadNestedTemplate("navbar_item","navbar", $data);
+
+        //template voor 1 item samenvoegen met data voor items
+        $template_navbar_item = LoadTemplate("navbar_item");
+        $navbar_items = ReplaceContent($data, $template_navbar_item);
+
+        //navbar template samenvoegen met resultaat ($navbar_items)
+        $data = array( "navbar_items" => $navbar_items ) ;
+        $template_navbar = LoadTemplate("navbar");
+        print ReplaceContentOneRow($data, $template_navbar);
     }
 }
