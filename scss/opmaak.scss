@@ -1,16 +1,138 @@
 /* SCSS bij fitguide2.0 */
 @import "partials/reset", "partials/variables", "partials/mixins",
-'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css',
 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600,700&display=swap';
 
-nav.mainnav {
+body {
+  @include font;
   background: $wit;
-  display: flex;
-  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: $secondary;
+
+  &:hover { text-decoration: underline; }
+}
+
+header {
+  @include flex(row,center, flex-end);
+  margin: 20px 0;
 
   img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+  }
+
+  a.menu {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    @include font($zwart, 400, 1rem, $hoofdfont, normal, 100px);
+    font-size: 1.9rem;
+  }
+
+  .overlay {
+    @include flex(column, center, center);
+    display: none;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s ease-out;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      @include font($wit, 700, 1.5rem, $hoofdfont, normal, 1.6, center);
+      display: block;
+      transition: 500ms ease-out;
+
+      &:hover, a.active {
+        color: $secondary;
+      }
+
+    }
+
+    .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
   }
 }
 
+section.section-one {
+
+  div.pic {
+    position: relative;
+    @include flex(row, center, center);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.3);
+    @include flex(column, center);
+
+      h1 {
+        @include font($zwart, 700, 2rem);
+        text-transform: uppercase;
+        margin-left: 20px;
+      }
+
+      p {
+        margin-left: 20px;
+      }
+  }
+}
+
+
+section.section-two {
+  @include flex(column, center, center);
+
+  div.pic {
+    position: relative;
+    @include flex(row, center, center);
+    width: 100%;
+    overflow: hidden;
+  }
+
+  h2 {
+    position: absolute;
+    @include font($wit, 700, 2rem);
+    text-transform: uppercase;
+  }
+
+  article {
+    text-align: center;
+    margin-top: 40px;
+
+    span {
+      color: $main;
+      font-size: 3rem;
+      padding-bottom: 15px;
+    }
+
+    h3 {
+      @include font($main, 700, 1.8rem, $hoofdfont, normal, 1.6, center);
+      text-transform: uppercase;
+      padding-bottom: 30px;
+    }
+
+    p {
+      @include font($zwart, 400, 1.4rem, $hoofdfont, normal, 1.6, center);
+      padding-bottom: 40px;
+    }
+  }
+}

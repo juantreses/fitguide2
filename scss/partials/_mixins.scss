@@ -3,7 +3,8 @@
 // Font
 
 @mixin font(
-  $fontweight: 300,
+  $color: $zwart,
+  $fontweight: 400,
   $fontsize: 100%,
   $fontfamily: $hoofdfont,
   $fontstyle: normal,
@@ -11,6 +12,7 @@
   $textalign: left,
   $letterspacing: 0
 ) {
+  color: $color;
   font: {
     weight: $fontweight;
     size: $fontsize;

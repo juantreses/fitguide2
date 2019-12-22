@@ -1,10 +1,14 @@
-<nav class="mainnav">
+<header class="navbalk">
     <a href="/wdev_joannes/fitguide2/index.php" title="Terug naar homepage"><img src="images/logo.png" alt="Logo" class="Logo"></a>
-    <a href="#menu" title="" class="menu">
-        <span class="fa fa-reorder"></span>
+    <a href="#menu" title="" class="menu" onclick="openNav()">
+        <span class="fa fa-bars"></span>
+        <span class="sr-only">Menu</span>
     </a>
 
-    <ul class="links">
-        @@navbar_items@@
-    </ul>
-</nav>
+    <nav class="overlay" id="myNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" title="">&times;</a>
+        <ul class="list-unstyled">
+        @@items@@
+        </ul>
+    </nav>
+</header>

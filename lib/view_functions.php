@@ -36,7 +36,7 @@ function ReplaceContentOneRow( $row, $template_html )
     return $content;
 }
 
-function LoadNestedTemplate ( $item, $template, $data ) {
+function PrintNestedTemplate ( $item, $template, $data ) {
     //template voor 1 item samenvoegen met data voor items
     $template_item = LoadTemplate("$item");
     $items = ReplaceContent($data, $template_item);
@@ -44,7 +44,7 @@ function LoadNestedTemplate ( $item, $template, $data ) {
     //item template samenvoegen met resultaat ($items)
     $data = array( "items" => $items );
     $print_template = LoadTemplate("$template");
-    return ReplaceContentOneRow($data, $print_template);
+    print ReplaceContentOneRow($data, $print_template);
 };
 
 function BasicHead() {
@@ -56,7 +56,9 @@ function PrintNavBar()
 {
     $laatste_deel_url = $_SERVER['SCRIPT_NAME'];
     if ( isset($_SESSION['usr'])) {
-        $data = GetData("select * from fitguideMenu where men_caption not like 'Login' and men_caption not like 'Registreer' order by men_order");
+        $sql = Navigatie("Login");
+        $data = GetData($sql);
+
 
         foreach( $data as $r => $row )
         {
@@ -67,25 +69,15 @@ function PrintNavBar()
             }
             else
             {
-
                 $data[$r]['active'] = '';
                 $data[$r]['sr_only'] = '';
             }
         }
-
-
-        //template voor 1 item samenvoegen met data voor items
-        $template_navbar_item = LoadTemplate("navbar_item");
-        $navbar_items = ReplaceContent($data, $template_navbar_item);
-
-        //navbar template samenvoegen met resultaat ($navbar_items)
-        $data = array( "navbar_items" => $navbar_items ) ;
-        $template_navbar = LoadTemplate("navbar");
-        print ReplaceContentOneRow($data, $template_navbar);
+        PrintNestedTemplate("navbar_item", "navbar", $data);
     }
     else {
-        $data = GetData("select * from fitguideMenu where men_caption not like 'Afmelden' order by men_order");
-
+        $sql = Navigatie("Afmelden");
+        $data = GetData($sql);
 
         foreach( $data as $r => $row )
         {
@@ -96,20 +88,10 @@ function PrintNavBar()
             }
             else
             {
-
                 $data[$r]['active'] = '';
                 $data[$r]['sr_only'] = '';
             }
         }
-
-
-        //template voor 1 item samenvoegen met data voor items
-        $template_navbar_item = LoadTemplate("navbar_item");
-        $navbar_items = ReplaceContent($data, $template_navbar_item);
-
-        //navbar template samenvoegen met resultaat ($navbar_items)
-        $data = array( "navbar_items" => $navbar_items ) ;
-        $template_navbar = LoadTemplate("navbar");
-        print ReplaceContentOneRow($data, $template_navbar);
+        PrintNestedTemplate("navbar_item", "navbar", $data);
     }
 }
