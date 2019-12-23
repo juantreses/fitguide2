@@ -1,0 +1,67 @@
+<div class="registratie-wrapper">
+    <div class="leftregister">
+        <img src="../images/logo.png" class="image-registratie" alt="">
+    </div>
+
+
+
+    <div class="rightregister">
+        <h2>
+            Registreer Hier
+        </h2>
+
+        <form id="registration_form" method="post" action="lib/registratie.php">
+
+            <input type="hidden" id="formname" name="formname" value="registration_form">
+            <input type="hidden" id="tablename" name="tablename" value="fitguideUser">
+            <input type="hidden" id="pkey" name="pkey" value="usr_id">
+
+            <ul>
+                <li>
+                    <label for="usr_voornaam">Voornaam</label>
+                    <input type="text" class="input" name="usr_voornaam" id="usr_voornaam" required>
+                </li>
+                <li>
+                    <label for="usr_naam">Naam</label>
+                    <input type="text" class="input" name="usr_naam" id="usr_naam" required>
+                </li>
+                <li>
+                    <label for="usr_geslacht">Geslacht</label>
+                    <select type="text" class="input" name="usr_geslacht" id="usr_geslacht" required>
+                        <option value="1">Man</option>
+                        <option value="2">Vrouw</option>
+                        <option value="3">Andere</option>
+                    </select>
+
+                </li>
+                <li>
+                    <label for="usr_email">E-mail</label>
+                    <input type="email" name="usr_email" id="usr_email" required>
+                </li>
+                <li>
+                    <label for="usr_username">Username</label>
+                    <input type="text" name="usr_username" id="usr_username" required>
+                </li>
+                <li>
+                    <label for="usr_wachtwoord">Wachtwoord</label>
+                    <input type="password" id="usr_wachtwoord" name="usr_wachtwoord" class="input" required>
+                </li>
+                <li>
+                    <label for="usr_lengte">Lengte(kg)</label>
+                    <input type="number" id="usr_lengte" name="usr_lengte" class="input" required>
+                </li>
+                <li>
+                    <label for="usr_gewicht">Gewicht(cm)</label>
+                    <input type="number" id="usr_gewicht" name="usr_gewicht" class="input" required>
+                </li>
+                <li>
+                    <input type="submit" value="Registreer">
+                </li>
+            </ul>
+        </form>
+
+
+
+
+    </div>
+</div>
