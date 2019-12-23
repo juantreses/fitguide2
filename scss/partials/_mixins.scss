@@ -42,13 +42,17 @@
 //Pseudo-classes positioning geven
 
 @mixin pseudo(
-  $display: block,
-  $pos: absolute,
-  $content: '') {
+  $content: '',
+  $color: $zwart,
+  $padding: 10px,
+  $display: block) {
+  font-family: "Font Awesome 5 Free";
   content: $content;
+  color: $color;
+  padding-right: $padding;
   display: $display;
-  position: $pos;
 }
+
 
 // Background
 
