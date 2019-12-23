@@ -75,6 +75,7 @@ img {
 
 /* Variables bij fitguide2.0 */
 /* Mixins bij Fitguide2.0 */
+/*Algemene stijlen ------------------------------------------------------------------------------------------------ */
 body {
   color: black;
   font-weight: 400;
@@ -92,6 +93,7 @@ a {
   a:hover {
     text-decoration: underline; }
 
+/* Header stijlen --------------------------------------------------------------------------------------------------*/
 header {
   display: flex;
   flex-direction: row;
@@ -151,6 +153,7 @@ header {
       right: 45px;
       font-size: 60px; }
 
+/* Sections Index --------------------------------------------------------------------------------------------------*/
 section.section-one div.pic {
   position: relative;
   display: flex;
@@ -447,11 +450,13 @@ section.section-four form {
     text-align: left;
     letter-spacing: 0; }
 
+/* Footer -----------------------------------------------------------------------------------------------------------*/
 footer {
   padding: 2em;
   background: #EEE;
   text-align: center; }
 
+/* Scroll to top button ---------------------------------------------------------------------------------------------*/
 #goToTop {
   cursor: pointer;
   display: none;
@@ -465,5 +470,51 @@ footer {
   border-radius: 5px; }
   #goToTop:hover {
     color: #FC3; }
+
+/* The snackbar messages ------------------------------------------------------------------------------------------ */
+.message {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px; }
+  .message .show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0; }
+  to {
+    bottom: 30px;
+    opacity: 1; } }
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0; }
+  to {
+    bottom: 30px;
+    opacity: 1; } }
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1; }
+  to {
+    bottom: 0;
+    opacity: 0; } }
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1; }
+  to {
+    bottom: 0;
+    opacity: 0; } }
 
 /*# sourceMappingURL=opmaak.css.map */

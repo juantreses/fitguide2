@@ -56,7 +56,7 @@ function PrintNavBar()
 {
     $laatste_deel_url = $_SERVER['SCRIPT_NAME'];
     if ( isset($_SESSION['usr'])) {
-        $sql = Navigatie("Login");
+        $sql = Navigatie("Login", "Register");
         $data = GetData($sql);
 
 
@@ -76,7 +76,7 @@ function PrintNavBar()
         PrintNestedTemplate("navbar_item", "navbar", $data);
     }
     else {
-        $sql = Navigatie("Afmelden");
+        $sql = Navigatie("Logout", '');
         $data = GetData($sql);
 
         foreach( $data as $r => $row )

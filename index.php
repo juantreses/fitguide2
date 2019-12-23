@@ -4,9 +4,11 @@ require_once "lib/autoload.php";
 
 BasicHead();
 ?>
-<body>
+<body onload="ShowMessage">
 <?php
 PrintNavBar();
+ShowMessages();
+
 ?>
 <main>
     <section class="section-one">
@@ -53,11 +55,11 @@ PrintNavBar();
             <ul>
                 <li>
                     <label for="con_naam"></label>
-                    <input type="text" id="con_naam" name="con_naam" placeholder="Name">
+                    <input type="text" id="con_naam" name="con_naam" placeholder="Name" required>
                 </li>
                 <li>
                     <label for="con_email"></label>
-                    <input type="email" id="con_email" name="con_email" placeholder="Email">
+                    <input type="email" id="con_email" name="con_email" placeholder="Email" required>
                 </li>
                 <li>
                     <label for="con_subject"></label>
@@ -65,10 +67,10 @@ PrintNavBar();
                 </li>
                 <li>
                     <label for="con_vraag"></label>
-                    <textarea name="con_vraag" id="con_vraag" rows="5" placeholder="Type your message here..."></textarea>
+                    <textarea name="con_vraag" id="con_vraag" rows="5" placeholder="Type your message here..." required></textarea>
                 </li>
                 <li>
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" name="contactbutton">
                 </li>
             </ul>
             <p>Thanks for submitting!</p>
@@ -86,6 +88,4 @@ PrintNavBar();
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
-<!-- Eigen scripts -->
-<script src="js/main.js"></script>
 </body>

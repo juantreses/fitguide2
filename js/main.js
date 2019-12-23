@@ -71,3 +71,12 @@ $(document).ready(function(){
     });
 });
 
+
+function ShowMessage() {
+
+    var x = document.getElementsByClassName("message");
+
+    x.className = "show";
+
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
