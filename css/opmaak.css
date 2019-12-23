@@ -160,28 +160,30 @@ section.section-one div.pic {
   width: 100%;
   height: 100vh;
   overflow: hidden; }
-section.section-one .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; }
-  section.section-one .overlay h1 {
-    color: black;
-    font-weight: 700;
-    font-size: 2rem;
-    font-family: "IBM Plex Sans", Arial, sans-serif;
-    font-style: normal;
-    line-height: 1.6;
-    text-align: left;
-    letter-spacing: 0;
-    text-transform: uppercase;
-    margin-left: 20px; }
-  section.section-one .overlay p {
-    margin-left: 20px; }
+  section.section-one div.pic img {
+    transform: translateX(-300px); }
+  section.section-one div.pic .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; }
+    section.section-one div.pic .overlay h1 {
+      color: black;
+      font-weight: 700;
+      font-size: 2rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: left;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      margin-left: 20px; }
+    section.section-one div.pic .overlay p {
+      margin-left: 20px; }
 
 section.section-two {
   display: flex;
@@ -235,5 +237,233 @@ section.section-two {
       text-align: center;
       letter-spacing: 0;
       padding-bottom: 40px; }
+
+section.section-three div.pic {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  section.section-three div.pic img {
+    width: 100%; }
+  section.section-three div.pic .overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%; }
+    section.section-three div.pic .overlay h2 {
+      color: black;
+      font-weight: 700;
+      font-size: 1.6rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: center;
+      letter-spacing: 0;
+      text-transform: uppercase; }
+    section.section-three div.pic .overlay button {
+      background-color: #288;
+      border: none;
+      color: white;
+      padding: 18px 38px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 19px;
+      margin: 4px 2px;
+      cursor: pointer; }
+
+section.section-four img {
+  width: 100%; }
+section.section-four form {
+  background: #288;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  section.section-four form h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    padding: 40px 0; }
+  section.section-four form ul {
+    width: 90%; }
+    section.section-four form ul input {
+      width: 100%;
+      padding: 1em 1.5em;
+      margin: .5em 0;
+      background: none;
+      border: solid 2px white;
+      color: white;
+      font-weight: 400;
+      font-size: 1.2rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: left;
+      letter-spacing: 0; }
+      section.section-four form ul input.placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+      section.section-four form ul input:-moz-placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+      section.section-four form ul input::-moz-placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+      section.section-four form ul input:-ms-input-placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+      section.section-four form ul input::-webkit-input-placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+    section.section-four form ul textarea {
+      width: 100%;
+      padding: 1em 1.5em;
+      margin: .5em 0;
+      background: none;
+      border: solid 2px white;
+      color: white;
+      font-weight: 400;
+      font-size: 1.2rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: left;
+      letter-spacing: 0; }
+      section.section-four form ul textarea.placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+      section.section-four form ul textarea:-moz-placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+      section.section-four form ul textarea::-moz-placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+      section.section-four form ul textarea:-ms-input-placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+      section.section-four form ul textarea::-webkit-input-placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+    section.section-four form ul input[type="Submit"] {
+      width: 100%;
+      padding: 1em 1.5em;
+      margin: .5em 0;
+      background: white;
+      border: none;
+      cursor: pointer;
+      transition: 300ms;
+      color: black;
+      font-weight: 400;
+      font-size: 1.2rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: center;
+      letter-spacing: 0; }
+      section.section-four form ul input[type="Submit"]:hover {
+        background: #111;
+        color: #288; }
+  section.section-four form p {
+    margin: .5em 0;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: left;
+    letter-spacing: 0; }
+
+footer {
+  padding: 2em;
+  background: #EEE;
+  text-align: center; }
+
+#goToTop {
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: #111;
+  color: #EEE;
+  font-size: 3rem;
+  padding: 0 .5em;
+  border-radius: 5px; }
+  #goToTop:hover {
+    color: #FC3; }
 
 /*# sourceMappingURL=opmaak.css.map */

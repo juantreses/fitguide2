@@ -76,14 +76,17 @@ section.section-one {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-  }
 
-  .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(255,255,255,.3);
-    @include flex(column, center);
+    img {
+      transform: translateX(-300px);
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,.3);
+      @include flex(column, center);
 
       h1 {
         @include font($zwart, 700, 2rem);
@@ -94,6 +97,7 @@ section.section-one {
       p {
         margin-left: 20px;
       }
+    }
   }
 }
 
@@ -135,4 +139,133 @@ section.section-two {
       padding-bottom: 40px;
     }
   }
+}
+
+section.section-three {
+
+  div.pic {
+    position: relative;
+    @include flex(row, center, center);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+
+    .overlay {
+      position: absolute;
+      @include flex(column, space-around, center);
+      height: 100%;
+
+      h2 {
+        @include font($zwart, 700, 1.6rem, $hoofdfont, normal, 1.6, center);
+        text-transform: uppercase;
+      }
+
+      button {
+        background-color: $secondary;
+        border: none;
+        color: white;
+        padding: 18px 38px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 19px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+section.section-four {
+  img {
+    width: 100%;
+  }
+
+  form {
+    background: $secondary;
+    @include flex(column, space-between, center);
+
+    h2 {
+      @include font($wit, 700, 1.5rem, $hoofdfont, normal, 1.6, center);
+      text-transform: uppercase;
+      padding: 40px 0;
+    }
+
+    ul {
+      width: 90%;
+
+      input {
+        width: 100%;
+        padding: 1em 1.5em;
+        margin: .5em 0;
+        background: none;
+        border: solid 2px $wit;
+        @include font($wit, 400, 1.2rem);
+
+        @include input-placeholder {
+          @include font($wit, 400, 1.2rem);
+        }
+      }
+
+      textarea {
+        width: 100%;
+        padding: 1em 1.5em;
+        margin: .5em 0;
+        background: none;
+        border: solid 2px $wit;
+        @include font($wit, 400, 1.2rem);
+
+        @include input-placeholder {
+          @include font($wit, 400, 1.2rem);
+        }
+      }
+
+      input[type="Submit"] {
+        width: 100%;
+        padding: 1em 1.5em;
+        margin: .5em 0;
+        background: $wit;
+        border: none;
+        cursor: pointer;
+        transition: 300ms;
+        @include font($zwart, 400, 1.2rem, $hoofdfont, normal, 1.6, center);
+
+        &:hover {
+          background: $donker;
+          color: $secondary;
+        }
+      }
+    }
+    p {
+      margin: .5em 0;
+      @include font($wit, 400, 1.2rem);
+    }
+  }
+}
+
+footer {
+  padding: 2em;
+  background: $licht;
+  text-align: center;
+}
+
+
+// Scroll to Top button
+#goToTop {
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: $donker;
+  color: $licht;
+  font-size: 3rem;
+  padding: 0 .5em;
+  border-radius: 5px;
+
+  &:hover { color: $main; }
 }
