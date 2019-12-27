@@ -162,20 +162,22 @@ section.section-one div.pic {
   align-items: center;
   width: 100%;
   height: 100vh;
-  overflow: hidden; }
+  overflow: hidden;
+  background: url(../images/running_shoes.jpg) center/cover no-repeat; }
   section.section-one div.pic img {
     transform: translateX(-300px); }
   section.section-one div.pic .overlay {
     position: absolute;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    color: #288;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start; }
     section.section-one div.pic .overlay h1 {
-      color: black;
+      color: #288;
       font-weight: 700;
       font-size: 2rem;
       font-family: "IBM Plex Sans", Arial, sans-serif;
@@ -188,6 +190,10 @@ section.section-one div.pic {
     section.section-one div.pic .overlay p {
       margin-left: 20px; }
 
+@media screen and (min-width: 700px) {
+  section.pic {
+    display: grid;
+    grid-template: auto/1fr 1fr; } }
 section.section-two {
   display: flex;
   flex-direction: column;
@@ -241,6 +247,10 @@ section.section-two {
       letter-spacing: 0;
       padding-bottom: 40px; }
 
+@media screen and (min-width: 700px) {
+  section.section-two {
+    display: grid;
+    grid-template: auto/1fr 1fr; } }
 section.section-three div.pic {
   position: relative;
   display: flex;
@@ -281,175 +291,184 @@ section.section-three div.pic {
       margin: 4px 2px;
       cursor: pointer; }
 
-section.section-four img {
-  width: 100%; }
-section.section-four form {
-  background: #288;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; }
-  section.section-four form h2 {
-    color: white;
-    font-weight: 700;
-    font-size: 1.5rem;
-    font-family: "IBM Plex Sans", Arial, sans-serif;
-    font-style: normal;
-    line-height: 1.6;
-    text-align: center;
-    letter-spacing: 0;
-    text-transform: uppercase;
-    padding: 40px 0; }
-  section.section-four form ul {
-    width: 90%; }
-    section.section-four form ul input {
-      width: 100%;
-      padding: 1em 1.5em;
-      margin: .5em 0;
-      background: none;
-      border: solid 2px white;
+section.section-four {
+  background: #288; }
+  section.section-four .testt {
+    background: url(../images/fitsmile.jpg) center/cover no-repeat; }
+  section.section-four form {
+    background: #288;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+    section.section-four form h2 {
       color: white;
-      font-weight: 400;
-      font-size: 1.2rem;
-      font-family: "IBM Plex Sans", Arial, sans-serif;
-      font-style: normal;
-      line-height: 1.6;
-      text-align: left;
-      letter-spacing: 0; }
-      section.section-four form ul input.placeholder {
-        color: white;
-        font-weight: 400;
-        font-size: 1.2rem;
-        font-family: "IBM Plex Sans", Arial, sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: left;
-        letter-spacing: 0; }
-      section.section-four form ul input:-moz-placeholder {
-        color: white;
-        font-weight: 400;
-        font-size: 1.2rem;
-        font-family: "IBM Plex Sans", Arial, sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: left;
-        letter-spacing: 0; }
-      section.section-four form ul input::-moz-placeholder {
-        color: white;
-        font-weight: 400;
-        font-size: 1.2rem;
-        font-family: "IBM Plex Sans", Arial, sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: left;
-        letter-spacing: 0; }
-      section.section-four form ul input:-ms-input-placeholder {
-        color: white;
-        font-weight: 400;
-        font-size: 1.2rem;
-        font-family: "IBM Plex Sans", Arial, sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: left;
-        letter-spacing: 0; }
-      section.section-four form ul input::-webkit-input-placeholder {
-        color: white;
-        font-weight: 400;
-        font-size: 1.2rem;
-        font-family: "IBM Plex Sans", Arial, sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: left;
-        letter-spacing: 0; }
-    section.section-four form ul textarea {
-      width: 100%;
-      padding: 1em 1.5em;
-      margin: .5em 0;
-      background: none;
-      border: solid 2px white;
-      color: white;
-      font-weight: 400;
-      font-size: 1.2rem;
-      font-family: "IBM Plex Sans", Arial, sans-serif;
-      font-style: normal;
-      line-height: 1.6;
-      text-align: left;
-      letter-spacing: 0; }
-      section.section-four form ul textarea.placeholder {
-        color: white;
-        font-weight: 400;
-        font-size: 1.2rem;
-        font-family: "IBM Plex Sans", Arial, sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: left;
-        letter-spacing: 0; }
-      section.section-four form ul textarea:-moz-placeholder {
-        color: white;
-        font-weight: 400;
-        font-size: 1.2rem;
-        font-family: "IBM Plex Sans", Arial, sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: left;
-        letter-spacing: 0; }
-      section.section-four form ul textarea::-moz-placeholder {
-        color: white;
-        font-weight: 400;
-        font-size: 1.2rem;
-        font-family: "IBM Plex Sans", Arial, sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: left;
-        letter-spacing: 0; }
-      section.section-four form ul textarea:-ms-input-placeholder {
-        color: white;
-        font-weight: 400;
-        font-size: 1.2rem;
-        font-family: "IBM Plex Sans", Arial, sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: left;
-        letter-spacing: 0; }
-      section.section-four form ul textarea::-webkit-input-placeholder {
-        color: white;
-        font-weight: 400;
-        font-size: 1.2rem;
-        font-family: "IBM Plex Sans", Arial, sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: left;
-        letter-spacing: 0; }
-    section.section-four form ul input[type="Submit"] {
-      width: 100%;
-      padding: 1em 1.5em;
-      margin: .5em 0;
-      background: white;
-      border: none;
-      cursor: pointer;
-      transition: 300ms;
-      color: black;
-      font-weight: 400;
-      font-size: 1.2rem;
+      font-weight: 700;
+      font-size: 1.5rem;
       font-family: "IBM Plex Sans", Arial, sans-serif;
       font-style: normal;
       line-height: 1.6;
       text-align: center;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      padding: 40px 0; }
+    section.section-four form ul {
+      width: 90%; }
+      section.section-four form ul input {
+        width: 100%;
+        padding: 1em 1.5em;
+        margin: .5em 0;
+        background: none;
+        border: solid 2px white;
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+        section.section-four form ul input.placeholder {
+          color: white;
+          font-weight: 400;
+          font-size: 1.2rem;
+          font-family: "IBM Plex Sans", Arial, sans-serif;
+          font-style: normal;
+          line-height: 1.6;
+          text-align: left;
+          letter-spacing: 0; }
+        section.section-four form ul input:-moz-placeholder {
+          color: white;
+          font-weight: 400;
+          font-size: 1.2rem;
+          font-family: "IBM Plex Sans", Arial, sans-serif;
+          font-style: normal;
+          line-height: 1.6;
+          text-align: left;
+          letter-spacing: 0; }
+        section.section-four form ul input::-moz-placeholder {
+          color: white;
+          font-weight: 400;
+          font-size: 1.2rem;
+          font-family: "IBM Plex Sans", Arial, sans-serif;
+          font-style: normal;
+          line-height: 1.6;
+          text-align: left;
+          letter-spacing: 0; }
+        section.section-four form ul input:-ms-input-placeholder {
+          color: white;
+          font-weight: 400;
+          font-size: 1.2rem;
+          font-family: "IBM Plex Sans", Arial, sans-serif;
+          font-style: normal;
+          line-height: 1.6;
+          text-align: left;
+          letter-spacing: 0; }
+        section.section-four form ul input::-webkit-input-placeholder {
+          color: white;
+          font-weight: 400;
+          font-size: 1.2rem;
+          font-family: "IBM Plex Sans", Arial, sans-serif;
+          font-style: normal;
+          line-height: 1.6;
+          text-align: left;
+          letter-spacing: 0; }
+      section.section-four form ul textarea {
+        width: 100%;
+        padding: 1em 1.5em;
+        margin: .5em 0;
+        background: none;
+        border: solid 2px white;
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+        section.section-four form ul textarea.placeholder {
+          color: white;
+          font-weight: 400;
+          font-size: 1.2rem;
+          font-family: "IBM Plex Sans", Arial, sans-serif;
+          font-style: normal;
+          line-height: 1.6;
+          text-align: left;
+          letter-spacing: 0; }
+        section.section-four form ul textarea:-moz-placeholder {
+          color: white;
+          font-weight: 400;
+          font-size: 1.2rem;
+          font-family: "IBM Plex Sans", Arial, sans-serif;
+          font-style: normal;
+          line-height: 1.6;
+          text-align: left;
+          letter-spacing: 0; }
+        section.section-four form ul textarea::-moz-placeholder {
+          color: white;
+          font-weight: 400;
+          font-size: 1.2rem;
+          font-family: "IBM Plex Sans", Arial, sans-serif;
+          font-style: normal;
+          line-height: 1.6;
+          text-align: left;
+          letter-spacing: 0; }
+        section.section-four form ul textarea:-ms-input-placeholder {
+          color: white;
+          font-weight: 400;
+          font-size: 1.2rem;
+          font-family: "IBM Plex Sans", Arial, sans-serif;
+          font-style: normal;
+          line-height: 1.6;
+          text-align: left;
+          letter-spacing: 0; }
+        section.section-four form ul textarea::-webkit-input-placeholder {
+          color: white;
+          font-weight: 400;
+          font-size: 1.2rem;
+          font-family: "IBM Plex Sans", Arial, sans-serif;
+          font-style: normal;
+          line-height: 1.6;
+          text-align: left;
+          letter-spacing: 0; }
+      section.section-four form ul input[type="Submit"] {
+        width: 100%;
+        padding: 1em 1.5em;
+        margin: .5em 0;
+        background: white;
+        border: none;
+        cursor: pointer;
+        transition: 300ms;
+        color: black;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: center;
+        letter-spacing: 0; }
+        section.section-four form ul input[type="Submit"]:hover {
+          background: #111;
+          color: #288; }
+    section.section-four form p {
+      margin: .5em 0;
+      color: white;
+      font-weight: 400;
+      font-size: 1.2rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: left;
       letter-spacing: 0; }
-      section.section-four form ul input[type="Submit"]:hover {
-        background: #111;
-        color: #288; }
-  section.section-four form p {
-    margin: .5em 0;
-    color: white;
-    font-weight: 400;
-    font-size: 1.2rem;
-    font-family: "IBM Plex Sans", Arial, sans-serif;
-    font-style: normal;
-    line-height: 1.6;
-    text-align: left;
-    letter-spacing: 0; }
 
+@media screen and (min-width: 700px) {
+  section.section-four {
+    display: grid;
+    grid-template: auto/1fr 1fr; }
+    section.section-four img#fit {
+      justify-content: center;
+      align-items: center; } }
 /* Footer -----------------------------------------------------------------------------------------------------------*/
 footer {
   padding: 2em;
@@ -516,5 +535,90 @@ footer {
   to {
     bottom: 0;
     opacity: 0; } }
+/* Registratiepagina---------------------------------------------------------------------*/
+body.registratiepagina {
+  background: #ffffff url(../images/running_shoes.jpg) center/cover no-repeat;
+  height: 100vh; }
+  body.registratiepagina h1 {
+    text-align: center;
+    color: #FFCC00;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0; }
+
+.registratie {
+  background: #288;
+  margin: 0 auto;
+  padding: 40px;
+  width: 40%;
+  min-width: 300px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin-top: 15%; }
+  .registratie #registration_form {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 40px;
+    width: 40%;
+    min-width: 300px;
+    border-radius: 10px; }
+  .registratie .registratie-hoofding h3 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 40px;
+    color: #FFCC00; }
+  .registratie input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    border: 1px solid #aaaaaa; }
+  .registratie input.invalid {
+    background-color: #ffdddd; }
+  .registratie .tab {
+    display: none; }
+  .registratie button {
+    background-color: #FFCC00;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer; }
+  .registratie button:hover {
+    opacity: 0.8; }
+  .registratie #prevBtn {
+    background-color: #bbbbbb; }
+  .registratie .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5; }
+  .registratie .step.active {
+    opacity: 1; }
+  .registratie .step.finish {
+    background-color: #4CAF51; }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: #288;
+  width: 100%;
+  margin-top: 10%; }
+
+.loginbutton {
+  background-color: #FFCC00;
+  color: white;
+  margin-top: 20px; }
 
 /*# sourceMappingURL=opmaak.css.map */
