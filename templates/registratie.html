@@ -1,67 +1,136 @@
-<div class="registratie-wrapper">
-    <div class="leftregister">
-        <img src="../images/logo.png" class="image-registratie" alt="">
+<body class="registratiepagina">
+
+<form id="registration_form" action="../lib/registratie.php" method="post" class="registratie">
+    <h1 >Registratie FitGuide</h1>
+    <input type="hidden" id="formname" name="formname" value="registration_form">
+    <input type="hidden" id="tablename" name="tablename" value="fitguideUser">
+    <input type="hidden" id="pkey" name="pkey" value="usr_id">
+    <div class="tab">Naam:
+        <ul class="list-unstyled">
+            <li>
+                <label for="usr_voornaam"></label>
+                <input type="text" class="input" name="usr_voornaam" placeholder="Voornaam" id="usr_voornaam" required>
+                <label for="usr_naam"></label>
+                <input type = "text" id= "usr_naam" placeholder="Naam..." oninput="this.className = ''" name="usr_naam" class="input">
+                <label for="usr_geslacht"></label>
+                <select type="text" class="input" name="usr_geslacht" id="usr_geslacht"  oninput="this.className = ''" required>
+                    <option value="1">Man</option>
+                    <option value="2">Vrouw</option>
+                    <option value="3">Andere</option>
+                </select>
+
+
+            </li>
+        </ul>
     </div>
+    <div class="tab">Contact Info:
+        <ul class="list-unstyled">
+            <li>
+                <label for="usr_email"></label>
+                <input type="email" name="usr_email" id="usr_email" oninput="this.className = ''" placeholder="email" required>
+                <label for="usr_username"></label>
+                <input type="text" placeholder="Username..." oninput="this.className = ''" name="usr_username" id="usr_username">
+                <label for="usr_wachtwoord"></label>
+                <input placeholder="Passwoord..." oninput="this.className = ''" name="usr_wachtwoord" id="usr_wachtwoord" type="password">
+            </li>
+        </ul>
+    </div>
+    <div class="tab">Antropometrie:
+        <ul class="list-unstyled">
+            <li>
+                <label for="usr_geboortedatum"></label>
+                <input type="date" class="input" id="usr_geboortedatum" name="usr_geboortedatum" value="" placeholder="Geboortedatum"
+                       oninput="this.className = ''">
+                <label for="usr_lengte"></label>
+                <input type="number" id="usr_lengte" name="usr_lengte" class="input" placeholder="Lengte(cm)"
+                       oninput="this.className = ''" required>
+                <label for="usr_gewicht"></label>
+                <input type="number" id="usr_gewicht" name="usr_gewicht" class="input" placeholder="Huidig gewicht(kg)"
+                       oninput="this.className = ''" required>
 
-
-
-    <div class="rightregister">
-        <h2>
-            Registreer Hier
-        </h2>
-
-        <form id="registration_form" method="post" action="lib/registratie.php">
-
-            <input type="hidden" id="formname" name="formname" value="registration_form">
-            <input type="hidden" id="tablename" name="tablename" value="fitguideUser">
-            <input type="hidden" id="pkey" name="pkey" value="usr_id">
-
-            <ul>
-                <li>
-                    <label for="usr_voornaam">Voornaam</label>
-                    <input type="text" class="input" name="usr_voornaam" id="usr_voornaam" required>
-                </li>
-                <li>
-                    <label for="usr_naam">Naam</label>
-                    <input type="text" class="input" name="usr_naam" id="usr_naam" required>
-                </li>
-                <li>
-                    <label for="usr_geslacht">Geslacht</label>
-                    <select type="text" class="input" name="usr_geslacht" id="usr_geslacht" required>
-                        <option value="1">Man</option>
-                        <option value="2">Vrouw</option>
-                        <option value="3">Andere</option>
-                    </select>
-
-                </li>
-                <li>
-                    <label for="usr_email">E-mail</label>
-                    <input type="email" name="usr_email" id="usr_email" required>
-                </li>
-                <li>
-                    <label for="usr_username">Username</label>
-                    <input type="text" name="usr_username" id="usr_username" required>
-                </li>
-                <li>
-                    <label for="usr_wachtwoord">Wachtwoord</label>
-                    <input type="password" id="usr_wachtwoord" name="usr_wachtwoord" class="input" required>
-                </li>
-                <li>
-                    <label for="usr_lengte">Lengte(kg)</label>
-                    <input type="number" id="usr_lengte" name="usr_lengte" class="input" required>
-                </li>
-                <li>
-                    <label for="usr_gewicht">Gewicht(cm)</label>
-                    <input type="number" id="usr_gewicht" name="usr_gewicht" class="input" required>
-                </li>
-                <li>
-                    <input type="submit" value="Registreer">
-                </li>
-            </ul>
-        </form>
-
-
-
+            </li>
+        </ul>
+    </div>
+    <div class="tab">Fit level:
+        <ul>
+            <li  class="list-unstyled">
+                <input type="text" class="input" id="tst_situp" name="tst_situp" placeholder="Maximum aantal sit-ups in 1 minuut" oninput="this.className = ''">
+                <input type="text" class="input" id="tst_pushup" name="tst_pushup" placeholder="Maximum aantal push-ups in 1 minuut" oninput="this.className = ''">
+                <input type="text" class="input" id="tst_wallsit" name="tst_wallsit" placeholder="Maximaal aantal seconden wallsit" oninput="this.className = ''">
+            </li>
+        </ul>
 
     </div>
-</div>
+    <div style="overflow:auto;">
+        <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Vorige</button>
+            <button type="button" name="registerbutton"  id="nextBtn" onclick="nextPrev(1)" value="Registreer">Volgende</button>
+        </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+    </div>
+
+</form>
+
+<script>
+    var currentTab = 0;
+    showTab(currentTab);
+
+    function showTab(n) {
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+        if (n == 0) {
+            document.getElementById("prevBtn").style.display = "none";
+        } else {
+            document.getElementById("prevBtn").style.display = "inline";
+        }
+        if (n == (x.length - 1)) {
+            document.getElementById("nextBtn").innerHTML = "Submit";
+        } else {
+            document.getElementById("nextBtn").innerHTML = "Next";
+        }
+        fixStepIndicator(n)
+    }
+
+    function nextPrev(n) {
+        var x = document.getElementsByClassName("tab");
+        if (n == 1 && !validateForm()) return false;
+        x[currentTab].style.display = "none";
+        currentTab = currentTab + n;
+        if (currentTab >= x.length) {
+            document.getElementById("registration_form").submit();
+            return false;
+        }
+        showTab(currentTab);
+    }
+
+    function validateForm() {
+        var x, y, i, valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[currentTab].getElementsByTagName("input");
+        for (i = 0; i < y.length; i++) {
+            if (y[i].value == "") {
+                y[i].className += " invalid";
+                valid = false;
+            }
+        }
+        if (valid) {
+            document.getElementsByClassName("step")[currentTab].className += " finish";
+        }
+        return valid;
+    }
+
+    function fixStepIndicator(n) {
+        var i, x = document.getElementsByClassName("step");
+        for (i = 0; i < x.length; i++) {
+            x[i].className = x[i].className.replace(" active", "");
+        }
+        x[n].className += " active";
+    }
+</script>
+
+</body>

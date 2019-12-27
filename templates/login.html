@@ -1,0 +1,29 @@
+<body class="registratiepagina">
+
+
+
+<form id="login_form" method="post" action="../lib/login.php" class="registratie">
+    <h1>Log In</h1>
+    <input type="hidden" id="formname" name="formname" value="login_form">
+    <input type="hidden" id="tablename" name="tablename" value="fitguideUser">
+    <input type="hidden" id="pkey" name="pkey" value="usr_id">
+
+
+    <ul class="list-unstyled test">
+        <li class="login">
+            <label for="usr_username"></label>
+            <span class="far fa-user"></span>
+            <input placeholder="Username..." name="usr_username" class="inputlogin" id="usr_username">
+
+            <label for="usr_wachtwoord"></label>
+            <span class="fas fa-key"></span>
+            <input placeholder="Passwoord..." name="usr_wachtwoord" type="password" class="inputlogin" id="usr_wachtwoord">
+
+        </li>
+
+
+    </ul>
+    <input name="loginbutton" type="submit" value="Log in" class="loginbutton">
+</form>
+
+</body>
