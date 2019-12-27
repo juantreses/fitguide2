@@ -4,20 +4,19 @@ require_once "lib/autoload.php";
 
 BasicHead();
 ?>
-<body onload="ShowMessage">
+<body>
 <?php
 PrintNavBar();
-ShowMessages();
-
 ?>
+
 <main>
     <section class="section-one">
         <div class="pic">
-            <img src="images/running_shoes.jpg" alt="">
             <div class="overlay">
                 <h1>Fitguide</h1>
                 <p>Progress starts here</p>
-            </div> <!-- overlay -->
+            </div>
+            <div></div> <!-- overlay -->
         </div> <!-- pic -->
     </section>
     <section class="section-two">
@@ -47,7 +46,9 @@ ShowMessages();
         </div> <!-- pic -->
     </section>
     <section class="section-four" id="contact">
-        <img src="images/fitsmile.jpg" alt="">
+        <div class="testt">
+            <!--        <img src="images/fitsmile.jpg" alt="" id="fit">-->
+        </div>
         <form action="lib/contact.php" method="post">
             <h2>Contact</h2>
             <input type="hidden" id="formname" name="formname" value="contact_form">
@@ -85,7 +86,7 @@ ShowMessages();
 </a>
 <!-- jQuery library -->
 <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
 </body>
