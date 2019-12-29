@@ -190,7 +190,7 @@ section.section-one div.pic {
     section.section-one div.pic .overlay p {
       margin-left: 20px; }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   section.pic {
     display: grid;
     grid-template: auto/1fr 1fr; } }
@@ -247,7 +247,7 @@ section.section-two {
       letter-spacing: 0;
       padding-bottom: 40px; }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   section.section-two {
     display: grid;
     grid-template: auto/1fr 1fr; } }
@@ -462,7 +462,7 @@ section.section-four {
       text-align: left;
       letter-spacing: 0; }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   section.section-four {
     display: grid;
     grid-template: auto/1fr 1fr; }

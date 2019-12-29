@@ -1,11 +1,12 @@
 <body class="registratiepagina">
 
-<form id="registration_form" action="../lib/registratie.php" method="post" class="registratie">
-    <h1 >Registratie FitGuide</h1>
+<form id="registration_form" action="lib/registratie.php" method="post" class="registratie">
+    <h1>Registration FitGuide</h1>
     <input type="hidden" id="formname" name="formname" value="registration_form">
     <input type="hidden" id="tablename" name="tablename" value="fitguideUser">
     <input type="hidden" id="pkey" name="pkey" value="usr_id">
-    <div class="tab">Naam:
+    <div class="tab">
+        <h2>Naam:</h2>
         <ul class="list-unstyled">
             <li>
                 <label for="usr_voornaam"></label>
@@ -18,12 +19,11 @@
                     <option value="2">Vrouw</option>
                     <option value="3">Andere</option>
                 </select>
-
-
             </li>
         </ul>
     </div>
-    <div class="tab">Contact Info:
+    <div class="tab">
+        <h2>Contact Info:</h2>
         <ul class="list-unstyled">
             <li>
                 <label for="usr_email"></label>
@@ -35,7 +35,8 @@
             </li>
         </ul>
     </div>
-    <div class="tab">Antropometrie:
+    <div class="tab">
+        <h2>Antropometrie:</h2>
         <ul class="list-unstyled">
             <li>
                 <label for="usr_geboortedatum"></label>
@@ -51,7 +52,8 @@
             </li>
         </ul>
     </div>
-    <div class="tab">Fit level:
+    <div class="tab">
+        <h2>Fit level:</h2>
         <ul>
             <li  class="list-unstyled">
                 <input type="text" class="input" id="tst_situp" name="tst_situp" placeholder="Maximum aantal sit-ups in 1 minuut" oninput="this.className = ''">
@@ -64,7 +66,7 @@
     <div style="overflow:auto;">
         <div style="float:right;">
             <button type="button" id="prevBtn" onclick="nextPrev(-1)">Vorige</button>
-            <button type="button" name="registerbutton"  id="nextBtn" onclick="nextPrev(1)" value="Registreer">Volgende</button>
+            <button type="button" name="registerbutton"  id="nextBtn" onclick="nextPrev(1)" value="Register">Volgende</button>
         </div>
     </div>
     <div style="text-align:center;margin-top:40px;">
@@ -89,7 +91,7 @@
             document.getElementById("prevBtn").style.display = "inline";
         }
         if (n == (x.length - 1)) {
-            document.getElementById("nextBtn").innerHTML = "Submit";
+            document.getElementById("nextBtn").innerHTML = "Register";
         } else {
             document.getElementById("nextBtn").innerHTML = "Next";
         }
