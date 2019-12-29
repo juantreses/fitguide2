@@ -1,50 +1,111 @@
-<body class="userpage">
-<div class="userpagina">
-    <section class="userinfo">
-        <div class="infobox1">
-            <h3>Hi,</h3>
-            <h3>@@usr_username@@</h3>
-        </div>
-
-        <div class="infobox">
-            <p>@@usr_voornaam@@</p>
-            <p>@@usr_naam@@</p>
-        </div>
-        <div class="infobox">
-            <h3 class = "fas fa-weight"></h3>
-            <p>@@usr_gewicht@@ kg</p>
-        </div>
-
-        <div class="infobox">
-            <h3 class="fas fa-fist-raised"></h3>
-            <p>@@usr_level@@ /10</p>
-        </div>
-
-        <div class="infobox">
-            <h3 class="fas fa-balance-scale-right"></h3>
-            <p>@@usr_doelgewicht@@ kg</p>
-        </div>
-
-
-
-    </section>
-
-
-    <section class="usertraining">
-        <div class="trainingsboxtop">
-            <h4>Feedback huidige BMI</h4>
-            <aside>Uw huidig BMI is @@usr_BMI@@, dit betekent dat ... @@usr_feedback@@(nog toe te voegen in database) </aside>
-        </div>
-
-        <div class="trainingsboxtop">
-            <h4>Voeg oefening toe</h4>
-            <aside><span class="fas fa-plus"><select name="" id="" class="fas fa-plus"></select></span>@@oef_naam@@ <br>
-                <button class="btn btn-success voegtoe">Voeg toe</button></aside>
-        </div>
-        <p id="traininguser">Voorgestelde oefeningen</p>
-        <p id="traininguser">Trainingsschema</p>
-        <div class="trainingsboxbot">
+<body class="userpagina">
+<img src="https://subtlepatterns.com/patterns/use_your_illusion.png" alt="">
+<div class="tabbed">
+    <input type="radio" name="tabs" id="tab-nav-1" checked>
+    <label for="tab-nav-1">Stats</label>
+    <input type="radio" name="tabs" id="tab-nav-2">
+    <label for="tab-nav-2">Edit stats</label><input type="radio" name="tabs" id="tab-nav-3">
+    <label for="tab-nav-3">Edit tests</label>
+    <input type="radio" name="tabs" id="tab-nav-4">
+    <label for="tab-nav-4">Voorgestelde oefeningen</label>
+    <input type="radio" name="tabs" id="tab-nav-5">
+    <label for="tab-nav-5">Trainingsschema</label>
+    <div class="tabs">
+        <div>
+            <h2>Mijn stats </h2>
+                    <span class="fas fa-weight">
+                        <p>Gewicht</p>
+                    </span>
+            <p>Uw huidige gewicht is <strong>@@usr_gewicht@@ kg </strong></p>
             <br>
+            <span class="fas fa-fist-raised">
+                        <p>Fitlevel</p>
+                    </span>
+            <p>Uw huidige fitlevel bedraagt <strong>@@usr_level@@ /10</strong></p>
+            <br>
+            <span class="fas fa-balance-scale-right">
+                        <p>Doelgewicht</p>
+                    </span>
+            <p>Uw huidige doel is <strong>@@usr_doelgewicht@@ kg </strong> </p>
+
+
+            <span class="fas fa-heart">
+                        <p>BMI</p>
+                    </span>
+            <p>Uw huidige BMI is <strong>@@usr_BMI@@</strong></p>
+
+
+
+
+
+
+        </div>
+        <div>
+            <h2>Beter of slechter geworden? </h2>
+            <p>Gewicht: @@usr_gewicht@@ kg</p>
+            <p>Lengte: @@usr_lengte@@ cm</p>
+            <p>BMI: @@usr_bmi@@</p>
+            <p>Streefgewicht: @@usr_doelgewicht@@ kg</p>
+            <p>Fitlevel: @@usr_level@@</p>
+            <input class="edit-stats"name="savebutton"  type="submit" value="Save" placeholder="Edit">
+        </div>
+        <div>
+            <h2>Tests</h2>
+
+            <form id="form_test" method="post" action="lib/savetest.php">
+
+                <input type="hidden" id="formname" name="formname" value="testing">
+                <input type="hidden" id="afterinsert" name="afterinsert" value="user.php">
+                <input type="hidden" id="tablename" name="tablename" value="fitguideTest">
+                <input type="hidden" id="pkey" name="pkey" value="tst_id">
+
+                <div class="form-testing">
+                    <label for="tst_situp">Sit-ups</label>
+                    <input type="text" class="input" id="tst_situp" name="tst_situp" placeholder="Aantal keer in 1 minuut">
+                </div>
+                <div class="form-testing">
+                    <label for="tst_pushup">Push-ups</label>
+                    <input type="text" class="input" id="tst_pushup" name="tst_pushup" placeholder="Aantal keer in 1 minuut">
+                </div>
+                <div class="form-testing">
+                    <label for="tst_wallsit">Wallsit</label>
+                    <input type="text" class="input" id="tst_wallsit" name="tst_wallsit" placeholder="In seconden">
+                </div>
+                <div class="form-testing">
+                    <label for="tst_ukk">UKK staptest</label>
+                    <input type="text" class="input" id="tst_ukk" name="tst_ukk" placeholder="Harstslagen per minuut">
+
+                </div>
+                <input name="savebutton" class="edit-stats " type="submit" value="Save" placeholder="Bereken mijn score">
+
+            </form>
+            <h4>Sit ups</h4>
+            <p>Met je knieën gebogen(90°) en voeten plat op de grond, je rug plat op de grond en je handen achter je hoofd, til je bovenlichaam op, tot je ellebogen je knieën aan kunnen raken. Je billen moeten de hele oefening plat op de grond blijven liggen.
+                Noteer het aantal sit-ups die u binnen de minuut kon uitvoeren </p><br>
+
+            <h4>Push-ups</h4>
+            <p>Ga met je buik op de grond liggen met de handen op de grond.
+                Zet je handen tenminste op schouderbreedte neer met de ellebogen licht naar binnen gebogen.
+                Strek je armen waardoor je lichaam omhoog komt met maximale kracht van je borstspieren en triceps.
+                Span goed je borstspieren aan als je boven bent.
+                Noteer het aantal push-ups die u binnen de minuut kon uitvoeren </p><br>
+
+            <h4>Wallsit</h4>
+            <p>Ga met je rug tegen een muur staan.
+                Zak rustig door je knieën.
+                Zet je voeten een stapje naar voren, een heupbreedte uit elkaar.
+                Je zit zoals je op een stoel zou zitten, maar dan tegen de muur, je knieën in een hoek van 90 graden.
+                Hoe deze positie zo lang mogelijk uit en vul het aantal seconden in het formulier in!</p> <br>
+
+
+            <h4>UKK-staptest</h4>
+            <p>Het is de bedoeling dat de 2 km wandelend (dus niet rennend) zo snel mogelijk en in een gelijkmatig (praat)tempo wordt afgelegd.
+                Na afloop wordt de hartslag en de wandeltijd genoteerd(in het formulier). Deze hartslag is, als je de test goed heb ook gevoerd, gedurende de test ongeveer gelijk gebleven.</p> <br>
+        </div>
+        <div>
+            <h2>Voorgestelde oefeningen</h2>
+            <p>Onderstaande oefeningen zijn geselecteerd op basis van de fysieke  tests die u uitvoerde. De voorgestelde oefeningen focussen op het gedeelte van de tests waarop u het laagste scoorde. U bent uiteraard vrij om zelf andere oefeningen toe te voegen aan uw trainingsschema.</p>
+
             <aside>
                 <p class="oefening">@@oef_naam1@@</p>
                 <p>Hiermee train je: @@spiergroep1@@</p>
@@ -58,74 +119,59 @@
                 <p>Hiermee train je: @@spiergroep5@@</p>
             </aside>
         </div>
-        <div class="trainingsboxbot">
+        <div>
+            <h2>Trainingsschema</h2>
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Oefening</th>
+                    <th scope="col">Gewicht</th>
+                    <th scope="col">Herhalingen</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>@@oefening@@</td>
+                    <td>@@oef_level_gewicht@@</td>
+                    <td>@@oef_level_herhalingen@@</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>@@oefening@@</td>
+                    <td>@@oef_level_gewicht@@</td>
+                    <td>@@oef_level_herhalingen@@</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>@@oefening@@</td>
+                    <td>@@oef_level_gewicht@@</td>
+                    <td>@@oef_level_herhalingen@@</td>
+                </tr>
 
-            <aside>
-                <table class="table">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Oefening</th>
-                        <th scope="col">Gewicht</th>
-                        <th scope="col">Herhalingen</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>@@oefening@@</td>
-                        <td>@@oef_level_gewicht@@</td>
-                        <td>@@oef_level_herhalingen@@</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>@@oefening@@</td>
-                        <td>@@oef_level_gewicht@@</td>
-                        <td>@@oef_level_herhalingen@@</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>@@oefening@@</td>
-                        <td>@@oef_level_gewicht@@</td>
-                        <td>@@oef_level_herhalingen@@</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>@@oefening@@</td>
-                        <td>@@oef_level_gewicht@@</td>
-                        <td>@@oef_level_herhalingen@@</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>@@oefening@@</td>
-                        <td>@@oef_level_gewicht@@</td>
-                        <td>@@oef_level_herhalingen@@</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td>@@oefening@@</td>
-                        <td>@@oef_level_gewicht@@</td>
-                        <td>@@oef_level_herhalingen@@</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </aside>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>@@oefening@@</td>
+                    <td>@@oef_level_gewicht@@</td>
+                    <td>@@oef_level_herhalingen@@</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>@@oefening@@</td>
+                    <td>@@oef_level_gewicht@@</td>
+                    <td>@@oef_level_herhalingen@@</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>@@oefening@@</td>
+                    <td>@@oef_level_gewicht@@</td>
+                    <td>@@oef_level_herhalingen@@</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
-
-
-
-    </section>
-
-
-
-
+    </div>
 </div>
-
-
-
-
-
-
-
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+</body>s
