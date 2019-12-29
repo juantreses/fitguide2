@@ -190,7 +190,7 @@ section.section-one div.pic {
     section.section-one div.pic .overlay p {
       margin-left: 20px; }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   section.pic {
     display: grid;
     grid-template: auto/1fr 1fr; } }
@@ -247,7 +247,7 @@ section.section-two {
       letter-spacing: 0;
       padding-bottom: 40px; }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   section.section-two {
     display: grid;
     grid-template: auto/1fr 1fr; } }
@@ -462,7 +462,7 @@ section.section-four {
       text-align: left;
       letter-spacing: 0; }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   section.section-four {
     display: grid;
     grid-template: auto/1fr 1fr; }
@@ -621,87 +621,94 @@ body.registratiepagina {
   color: white;
   margin-top: 20px; }
 
-/*USERPAGINA-----------------------------------------------------------------------*/
-.userpage {
-  background: #288 url(../images/running_shoes.jpg) center/cover no-repeat;
-  height: 100vh; }
+* {
+  box-sizing: border-box; }
 
-.userpagina {
-  display: grid;
-  grid-template: auto/ 20% 75%; }
+body.userpagina {
+  background: url(https://subtlepatterns.com/patterns/use_your_illusion.png);
+  color: #eee;
+  font: 1em 'PT Sans', sans-serif; }
 
-.userinfo {
-  display: grid;
-  grid-template: auto/ 1fr;
-  grid-template-columns: 49%;
-  grid-row-gap: 15px;
-  justify-content: center;
-  overflow: auto;
-  border-right: 2px solid black;
-  overflow-x: hidden;
-  /*    grid-template-rows: max-content;*/ }
+::selection {
+  background-color: #4EC6DE; }
 
-.userinfo .infobox {
-  border: 1px solid white;
-  background: rgba(255, 255, 255, 0.1);
-  text-align: center;
-  padding: 20px;
-  border-radius: 5px;
-  overflow: auto;
-  overflow-x: hidden;
-  background: white;
-  box-shadow: 4px 4px 4px  black; }
+.tabbed {
+  width: 700px;
+  margin: 50px auto; }
 
-.userinfo .infobox1 h3 {
-  font-weight: 600; }
+.tabbed > input {
+  display: none; }
 
-.userinfo .infobox h3 {
-  border-bottom: 1px solid black; }
+.tabbed > label {
+  display: block;
+  float: left;
+  padding: 12px 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color .3s; }
 
-.userinfo .infobox:hover {
-  background: rgba(0, 0, 0, 0.9);
-  color: #288; }
+.tabbed > label:hover,
+.tabbed > input:checked + label {
+  background: #4EC6DE; }
 
-.userinfo .infobox h3:hover {
+.tabs {
+  clear: both;
+  perspective: 600px; }
+
+.tabs > div {
+  width: 700px;
+  position: absolute;
+  border: 2px solid #4EC6DE;
+  padding: 10px 30px 40px;
+  line-height: 1.4em;
+  opacity: 0;
+  transform: rotateX(-20deg);
+  transform-origin: top center;
+  transition: opacity .3s, transform 1s;
+  z-index: 0; }
+
+#tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
+#tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
+#tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
+#tab-nav-4:checked ~ .tabs > div:nth-of-type(4),
+#tab-nav-5:checked ~ .tabs > div:nth-of-type(5) {
+  transform: rotateX(0);
+  opacity: 1;
+  z-index: 1; }
+
+@media screen and (max-width: 700px) {
+  .tabbed {
+    width: 400px; }
+
+  .tabbed > label {
+    display: none; }
+
+  .tabs > div {
+    width: 400px;
+    border: none;
+    padding: 0;
+    opacity: 1;
+    position: relative;
+    transform: none;
+    margin-bottom: 60px; }
+
+  .tabs > div h2 {
+    border-bottom: 2px solid #4EC6DE;
+    padding-bottom: .5em; } }
+.fas {
   color: white; }
 
-.usertraining {
-  display: grid;
-  grid-template: 20% 5% 75% / 1fr 1fr;
-  grid-row-gap: 15px;
-  grid-column-gap: 40px;
-  padding: 20px; }
+input.edit-stats {
+  background: #288;
+  color: black; }
 
-.usertraining .trainingsboxtop {
+tr {
+  margin-bottom: 10px; }
+
+tr:nth-of-type(even) {
   background: white;
-  text-align: center;
-  box-shadow: 4px 4px 4px  black; }
+  color: black; }
 
-.usertraining .trainingsboxbot {
-  background: #288;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 4px 4px 4px  black; }
-
-.trainingsboxtop h4 {
-  font-weight: 700; }
-
-p#traininguser {
-  font-weight: 700;
-  font-size: 2em;
-  text-align: center; }
-
-button.voegtoe {
-  background: #288;
-  margin-top: 10px; }
-
-p.oefening {
-  font-weight: 700; }
-
-.thead-dark {
-  background: #343A40;
-  color: white;
-  font-weight: 700;
-  border-radius: 25px; }
+/*--------------------------------------*/
 
 /*# sourceMappingURL=opmaak.css.map */
