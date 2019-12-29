@@ -447,6 +447,118 @@ body.registratiepagina{
   margin-top: 20px;
 }
 
+/*USERPAGINA-----------------------------------------------------------------------*/
+
+
+
+.userpage{
+  background: #288 url(../images/running_shoes.jpg) center/cover no-repeat;
+  height: 100vh;
+}
+.userpagina{
+  display: grid;
+  grid-template: auto/ 20% 75%;
+
+}
+
+.userinfo{
+  display: grid;
+  grid-template: auto/ 1fr;
+  grid-template-columns: 49%;
+  grid-row-gap: 15px;
+  justify-content: center;
+  overflow: auto;
+  border-right: 2px solid black;
+  overflow-x: hidden;
+
+
+  /*    grid-template-rows: max-content;*/
+
+}
+
+.userinfo .infobox{
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  overflow: auto;
+  overflow-x: hidden;
+  background: white;
+  box-shadow: 4px 4px 4px  black;
+}
+
+.userinfo .infobox1 h3{
+  font-weight: 600;
+
+}
+
+.userinfo .infobox h3{
+  border-bottom: 1px solid black;
+
+}
+
+.userinfo .infobox:hover{
+  background: rgba(0, 0, 0, 0.9);
+  color: #288;
+}
+
+.userinfo .infobox h3:hover{
+  color: white;
+}
+
+.usertraining{
+  display: grid;
+  grid-template: 20% 5% 75% / 1fr 1fr;
+  grid-row-gap: 15px;
+  grid-column-gap: 40px;
+  padding: 20px;
+
+}
+
+.usertraining .trainingsboxtop{
+  background: white;
+  text-align: center;
+  box-shadow: 4px 4px 4px  black;
+}
+
+
+.usertraining .trainingsboxbot{
+  background: #288;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px  black;
+
+}
+
+.trainingsboxtop h4{
+  font-weight: 700;
+}
+
+p#traininguser{
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+}
+
+button.voegtoe{
+  background: #288;
+  margin-top: 10px;
+}
+
+p.oefening{
+  font-weight: 700;
+}
+
+.thead-dark{
+  background: #343A40;
+  color: white;
+  font-weight: 700;
+  border-radius: 25px;
+}
+
+
+
 
 
 
