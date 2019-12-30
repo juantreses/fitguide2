@@ -1,5 +1,5 @@
 <?php
-$index = true;
+$register = true;
 require_once "lib/autoload.php";
 
 BasicHead();
@@ -16,3 +16,6 @@ PrintNavBar();
 
     ?>
 </main>
+<footer>
+    <p>&copy; 2019 by FitGuide</p>
+</footer>

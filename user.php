@@ -27,3 +27,6 @@ $template = LoadTemplate("user");
     print LoadTemplate("user");
     ?>
 </main>
+<footer>
+    <p>&copy; 2019 by FitGuide</p>
+</footer>
