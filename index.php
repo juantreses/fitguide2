@@ -40,7 +40,7 @@ PrintNavBar();
         <div class="pic">
             <div class="overlay">
                 <h2>Get your guide today</h2>
-                <a href="register.php"><button>Register</button></a>
+                <a href="registreer.php"><button>Register</button></a>
             </div> <!-- overlay -->
             <img src="images/dumbbells.jpg" alt="">
         </div> <!-- pic -->

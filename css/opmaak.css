@@ -469,12 +469,6 @@ section.section-four {
     section.section-four img#fit {
       justify-content: center;
       align-items: center; } }
-/* Footer -----------------------------------------------------------------------------------------------------------*/
-footer {
-  padding: 2em;
-  background: #EEE;
-  text-align: center; }
-
 /* Scroll to top button ---------------------------------------------------------------------------------------------*/
 #goToTop {
   cursor: pointer;
@@ -536,12 +530,17 @@ footer {
     bottom: 0;
     opacity: 0; } }
 /* Registratiepagina---------------------------------------------------------------------*/
-body.registratiepagina {
-  background: #ffffff url(../images/running_shoes.jpg) center/cover no-repeat;
-  height: 100vh; }
-  body.registratiepagina h1 {
-    text-align: center;
-    color: #FFCC00;
+div.pic {
+  background: url("../images/benchpress.png") center/cover no-repeat;
+  height: 183px; }
+
+form {
+  background: #288;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  form h1, form h2, form h3 {
     color: white;
     font-weight: 700;
     font-size: 1.5rem;
@@ -549,50 +548,110 @@ body.registratiepagina {
     font-style: normal;
     line-height: 1.6;
     text-align: center;
-    letter-spacing: 0; }
-
-.registratie {
-  background: #288;
-  margin: 0 auto;
-  padding: 40px;
-  width: 40%;
-  min-width: 300px;
-  border-radius: 10px;
-  max-width: 800px;
-  margin-top: 15%; }
-  .registratie #registration_form {
-    background-color: #ffffff;
-    margin: 0 auto;
-    padding: 40px;
-    width: 40%;
-    min-width: 300px;
-    border-radius: 10px; }
-  .registratie .registratie-hoofding h3 {
+    letter-spacing: 0;
+    text-transform: uppercase;
+    padding: 40px 0; }
+  form p, form ol {
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
     text-align: center;
-    font-size: 50px;
-    margin-top: 40px;
-    color: #FFCC00; }
-  .registratie input {
-    padding: 10px;
+    letter-spacing: 0; }
+  form ul {
+    width: 90%; }
+    form ul input, form ul select {
+      width: 100%;
+      padding: 1em 1.5em;
+      margin: .5em;
+      background: none;
+      border: solid 2px white;
+      color: white;
+      font-weight: 400;
+      font-size: 1.2rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: left;
+      letter-spacing: 0; }
+      form ul input option, form ul select option {
+        color: black;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+      form ul input.placeholder, form ul select.placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+      form ul input:-moz-placeholder, form ul select:-moz-placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+      form ul input::-moz-placeholder, form ul select::-moz-placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+      form ul input:-ms-input-placeholder, form ul select:-ms-input-placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+      form ul input::-webkit-input-placeholder, form ul select::-webkit-input-placeholder {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0; }
+  form input[type="Submit"], form button {
     width: 100%;
-    font-size: 17px;
-    border: 1px solid #aaaaaa; }
-  .registratie input.invalid {
-    background-color: #ffdddd; }
-  .registratie .tab {
-    display: none; }
-  .registratie button {
-    background-color: #FFCC00;
-    color: #ffffff;
+    padding: 1em 1.5em;
+    margin: .5em 0;
+    background: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 17px;
-    cursor: pointer; }
-  .registratie button:hover {
-    opacity: 0.8; }
-  .registratie #prevBtn {
-    background-color: #bbbbbb; }
-  .registratie .step {
+    cursor: pointer;
+    transition: 300ms;
+    color: black;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0; }
+    form input[type="Submit"]:hover, form button:hover {
+      background: #111;
+      color: #288; }
+  form .tab {
+    display: none; }
+  form .step {
     height: 15px;
     width: 15px;
     margin: 0 2px;
@@ -601,28 +660,10 @@ body.registratiepagina {
     border-radius: 50%;
     display: inline-block;
     opacity: 0.5; }
-  .registratie .step.active {
+  form .step.active {
     opacity: 1; }
-  .registratie .step.finish {
+  form .step.finish {
     background-color: #4CAF51; }
-
-.login {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  background: #288;
-  width: 100%;
-  margin-top: 10%; }
-
-.loginbutton {
-  background-color: #FFCC00;
-  color: white;
-  margin-top: 20px; }
-
-* {
-  box-sizing: border-box; }
 
 body.userpagina {
   background: url(https://subtlepatterns.com/patterns/use_your_illusion.png);
@@ -708,6 +749,12 @@ tr {
 tr:nth-of-type(even) {
   background: white;
   color: black; }
+
+/* Footer -----------------------------------------------------------------------------------------------------------*/
+footer {
+  padding: 2em;
+  background: #EEE;
+  text-align: center; }
 
 /*--------------------------------------*/
 

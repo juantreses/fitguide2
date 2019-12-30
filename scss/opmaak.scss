@@ -284,15 +284,6 @@ section.section-four {
 }
 
 
-/* Footer -----------------------------------------------------------------------------------------------------------*/
-
-footer {
-  padding: 2em;
-  background: $licht;
-  text-align: center;
-}
-
-
 /* Scroll to top button ---------------------------------------------------------------------------------------------*/
 #goToTop {
   cursor: pointer;
@@ -354,65 +345,66 @@ footer {
 
 /* Registratiepagina---------------------------------------------------------------------*/
 
-body.registratiepagina{
-  background: #ffffff url(../images/running_shoes.jpg) center/cover no-repeat;
-  height: 100vh;
-  h1{
-    text-align: center;
-    color:#FFCC00;
-    @include font($wit, 700, 1.5rem, $hoofdfont, normal, 1.6, center);
-  }
+div.pic {
+  background: url("../images/benchpress.png") center/cover no-repeat;
+  height: 183px;
 }
-.registratie{
+
+form {
   background: $secondary;
-  margin: 0 auto;
-  padding: 40px;
-  width: 40%;
-  min-width: 300px;
-  border-radius:10px;
-  max-width: 800px;
-  margin-top: 15%;
-  #registration_form {
-    background-color: #ffffff;
-    margin: 0 auto;
-    padding: 40px;
-    width: 40%;
-    min-width: 300px;
-    border-radius:10px;
-  }
-  .registratie-hoofding h3 {
-    text-align: center;
-    font-size:50px;
-    margin-top:40px;
-    color:#FFCC00;
+  @include flex(column, space-between, center);
+
+  h1, h2, h3 {
+      @include font($wit, 700, 1.5rem, $hoofdfont, normal, 1.6, center);
+      text-transform: uppercase;
+      padding: 40px 0;
   }
 
-  input {
-    padding: 10px;
-    width: 100%;
-    font-size: 17px;
-    border: 1px solid #aaaaaa;
+  p, ol {
+    @include font($wit, 400, 1rem, $hoofdfont, normal, 1.6, center);
   }
-  input.invalid {
-    background-color: #ffdddd;
-  }
+
+
+  ul {
+    width: 90%;
+
+    input, select {
+      width: 100%;
+      padding: 1em 1.5em;
+      margin: .5em;
+      background: none;
+      border: solid 2px $wit;
+      @include font($wit, 400, 1.2rem);
+
+      option {
+        @include font($zwart, 400, 1.2rem);
+      }
+
+      @include input-placeholder {
+        @include font($wit, 400, 1.2rem);
+      }
+    }
+    }
+
+    input[type="Submit"], button {
+      width: 100%;
+      padding: 1em 1.5em;
+      margin: .5em 0;
+      background: $wit;
+      border: none;
+      cursor: pointer;
+      transition: 300ms;
+      @include font($zwart, 400, 1.2rem, $hoofdfont, normal, 1.6, center);
+
+      &:hover {
+        background: $donker;
+        color: $secondary;
+      }
+    }
   .tab {
     display: none;
   }
-  button {
-    background-color: #FFCC00;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 17px;
-    cursor: pointer;
-  }
-  button:hover {
-    opacity: 0.8;
-  }
-  #prevBtn {
-    background-color: #bbbbbb;
-  }
+
   .step {
     height: 15px;
     width: 15px;
@@ -423,39 +415,16 @@ body.registratiepagina{
     display: inline-block;
     opacity: 0.5;
   }
-    .step.active {
-      opacity: 1;
-    }
-    .step.finish {
-      background-color: #4CAF51;
-    }
-}
-
-.login{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  background: #288;
-  width: 100%;
-  margin-top: 10%
-}
-.loginbutton{
-  background-color: #FFCC00;
-  color:white;
-  margin-top: 20px;
+  .step.active {
+    opacity: 1;
+  }
+  .step.finish {
+    background-color: #4CAF51;
+  }
 }
 
 //Userpage
 
-
-
-
-
-* {
-  box-sizing: border-box;
-}
 
 body.userpagina {
   background: url(https://subtlepatterns.com/patterns/use_your_illusion.png);
@@ -557,6 +526,14 @@ tr:nth-of-type(even){
   background: white;
   color:black;
 
+}
+
+/* Footer -----------------------------------------------------------------------------------------------------------*/
+
+footer {
+  padding: 2em;
+  background: $licht;
+  text-align: center;
 }
 
 

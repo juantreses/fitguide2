@@ -1,82 +1,103 @@
-<body class="registratiepagina">
-
+<div class="pic">
+</div>
 <form id="registration_form" action="lib/registratie.php" method="post" class="registratie">
     <h1>Registration FitGuide</h1>
     <input type="hidden" id="formname" name="formname" value="registration_form">
     <input type="hidden" id="tablename" name="tablename" value="fitguideUser">
     <input type="hidden" id="pkey" name="pkey" value="usr_id">
     <div class="tab">
-        <h2>Naam:</h2>
+        <h2>Personal info:</h2>
         <ul class="list-unstyled">
             <li>
                 <label for="usr_voornaam"></label>
-                <input type="text" class="input" name="usr_voornaam" placeholder="Voornaam" id="usr_voornaam" required>
+                <input type="text" class="input" name="usr_voornaam" placeholder="First Name" id="usr_voornaam" required>
                 <label for="usr_naam"></label>
-                <input type = "text" id= "usr_naam" placeholder="Naam..." oninput="this.className = ''" name="usr_naam" class="input">
+                <input type="text" id="usr_naam" placeholder="Name" oninput="this.className = ''" name="usr_naam" class="input">
                 <label for="usr_geslacht"></label>
                 <select type="text" class="input" name="usr_geslacht" id="usr_geslacht"  oninput="this.className = ''" required>
-                    <option value="1">Man</option>
-                    <option value="2">Vrouw</option>
-                    <option value="3">Andere</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">Other</option>
                 </select>
             </li>
         </ul>
     </div>
     <div class="tab">
-        <h2>Contact Info:</h2>
+        <h2>Contact info:</h2>
         <ul class="list-unstyled">
             <li>
                 <label for="usr_email"></label>
-                <input type="email" name="usr_email" id="usr_email" oninput="this.className = ''" placeholder="email" required>
+                <input type="email" name="usr_email" id="usr_email" oninput="this.className = ''" placeholder="Email" required>
                 <label for="usr_username"></label>
-                <input type="text" placeholder="Username..." oninput="this.className = ''" name="usr_username" id="usr_username">
+                <input type="text" placeholder="Username" oninput="this.className = ''" name="usr_username" id="usr_username">
                 <label for="usr_wachtwoord"></label>
-                <input placeholder="Passwoord..." oninput="this.className = ''" name="usr_wachtwoord" id="usr_wachtwoord" type="password">
+                <input placeholder="Password" oninput="this.className = ''" name="usr_wachtwoord" id="usr_wachtwoord" type="password">
             </li>
         </ul>
     </div>
     <div class="tab">
-        <h2>Antropometrie:</h2>
+        <h2>Body info:</h2>
         <ul class="list-unstyled">
             <li>
                 <label for="usr_geboortedatum"></label>
-                <input type="date" class="input" id="usr_geboortedatum" name="usr_geboortedatum" value="" placeholder="Geboortedatum"
+                <input type="date" class="input" id="usr_geboortedatum" name="usr_geboortedatum" value="" placeholder="Date Of Birth"
                        oninput="this.className = ''">
                 <label for="usr_lengte"></label>
-                <input type="number" id="usr_lengte" name="usr_lengte" class="input" placeholder="Lengte(cm)"
+                <input type="number" id="usr_lengte" name="usr_lengte" class="input" placeholder="Length (cm)"
                        oninput="this.className = ''" required>
                 <label for="usr_gewicht"></label>
-                <input type="number" id="usr_gewicht" name="usr_gewicht" class="input" placeholder="Huidig gewicht(kg)"
+                <input type="number" id="usr_gewicht" name="usr_gewicht" class="input" placeholder="Current weight(kg)"
                        oninput="this.className = ''" required>
-
             </li>
         </ul>
     </div>
     <div class="tab">
         <h2>Fit level:</h2>
+        <p>Fill in these tests to let the application calculate your Fit Level.</p>
+        <p>(If you don't have time to do the exercises right now, just fill in an estimate)</p>
+        <p>Exercises are explained down below</p>
         <ul>
-            <li  class="list-unstyled">
-                <input type="text" class="input" id="tst_situp" name="tst_situp" placeholder="Maximum aantal sit-ups in 1 minuut" oninput="this.className = ''">
-                <input type="text" class="input" id="tst_pushup" name="tst_pushup" placeholder="Maximum aantal push-ups in 1 minuut" oninput="this.className = ''">
-                <input type="text" class="input" id="tst_wallsit" name="tst_wallsit" placeholder="Maximaal aantal seconden wallsit" oninput="this.className = ''">
+            <li class="list-unstyled">
+                <input type="text" class="input" id="tst_situp" name="tst_situp" placeholder="Sit-ups in 1 min" oninput="this.className = ''">
+                <input type="text" class="input" id="tst_pushup" name="tst_pushup" placeholder="Push-ups in 1 min" oninput="this.className = ''">
+                <input type="text" class="input" id="tst_wallsit" name="tst_wallsit" placeholder="Seconds of Wallsit" oninput="this.className = ''">
             </li>
         </ul>
-
+        <h3>Test 1: Sit-ups</h3>
+        <ol>
+            <li>
+                Lie down on the floor placing your feet either under something that will not move or by having a partner hold them. Your legs should be bent at the knees.
+            </li>
+            <li>
+                Place your hands behind your head and lock them together by clasping your fingers. This is the starting position.
+            </li>
+            <li>
+                Elevate your upper body so that it creates an imaginary V-shape with your thighs. Breathe out when performing this part of the exercise.
+            </li>
+            <li>
+                Once you feel the contraction for a second, lower your upper body back down to the starting position while inhaling.
+            </li>
+            <li>
+                Repeat for one minute and enter your amount of repetitions above.
+            </li>
+        </ol>
+        <h3>Push-ups</h3>
+        <h3>Wallsit</h3>
     </div>
-    <div style="overflow:auto;">
-        <div style="float:right;">
-            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Vorige</button>
+    <div class="buttonholder">
+        <div class="buttons">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
             <button type="button" name="registerbutton"  id="nextBtn" onclick="nextPrev(1)" value="Register">Volgende</button>
         </div>
     </div>
-    <div style="text-align:center;margin-top:40px;">
+    <div class="steps">
         <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
     </div>
-
 </form>
+
 
 <script>
     var currentTab = 0;
@@ -134,5 +155,3 @@
         x[n].className += " active";
     }
 </script>
-
-</body>
