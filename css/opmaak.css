@@ -530,7 +530,7 @@ section.section-four {
     bottom: 0;
     opacity: 0; } }
 /* Registratiepagina---------------------------------------------------------------------*/
-div.pic {
+div.picregistratie {
   background: url("../images/benchpress.png") center/cover no-repeat;
   height: 183px; }
 
