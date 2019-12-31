@@ -1,7 +1,7 @@
 <?php
 $index = true;
 require_once "lib/autoload.php";
-
+ShowMessages();
 BasicHead();
 ?>
 <body>
@@ -84,9 +84,7 @@ PrintNavBar();
 <a href="javascript:void(0);" id="goToTop">
     <span class="fa fa-arrow-circle-up"></span>
 </a>
+
 <!-- jQuery library -->
-<script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
+
 </body>
