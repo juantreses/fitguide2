@@ -72,7 +72,8 @@ $(document).ready(function(){
 });
 
 
-function ShowMessage() {
+
+function ShowMessages() {
 
     var x = document.getElementsByClassName("message");
 
