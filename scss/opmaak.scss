@@ -301,46 +301,16 @@ section.section-four {
 }
 
 /* The snackbar messages ------------------------------------------------------------------------------------------ */
-.message {
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: $zwart;
-  color: $wit;
-  text-align: center;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  bottom: 30px;
-
-  .show {
-    visibility: visible;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  }
+.breadcrumb-item, .breadcrumb {
+    background: #872525;
+    color: white;
+    border-radius: 0;
+    margin-bottom: 0;
 }
 
-
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+.breadcrumb-item.active {
+    color: white;
 }
-
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
-}
-
-@keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
-}
-
 
 
 /* Registratiepagina---------------------------------------------------------------------*/
@@ -423,7 +393,20 @@ form {
   }
 }
 
-//Userpage
+/*loginpage------------------------------------------------------------*/
+
+
+div.piclogin {
+  background: url("../images/benchpress.png") center/cover no-repeat;
+  height: 183px; }
+.loginbutton{
+  text-align: center;
+  align-content: center;
+  width: 20%;
+}
+
+
+/*Userpage------------------------------------------------------------------*/
 
 
 body.userpagina {
