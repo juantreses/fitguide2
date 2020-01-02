@@ -354,6 +354,16 @@ form {
         @include font($wit, 400, 1.2rem);
       }
     }
+
+    a {
+      text-decoration: underline;
+      color: $main;
+      transition: all 500ms;
+
+      &:hover {
+        color: white;
+      }
+    }
     }
 
     input[type="Submit"], button {
@@ -399,12 +409,6 @@ form {
 div.piclogin {
   background: url("../images/benchpress.png") center/cover no-repeat;
   height: 183px; }
-.loginbutton{
-  text-align: center;
-  align-content: center;
-  width: 20%;
-}
-
 
 /*Userpage------------------------------------------------------------------*/
 

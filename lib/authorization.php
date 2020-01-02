@@ -2,7 +2,7 @@
 function ControleLoginWachtwoord( $login, $paswd )
 {
     //gebruiker opzoeken ahv zijn login (e-mail)
-    $sql = "SELECT * FROM fitguideUser WHERE usr_username='" . $login . "' ";
+    $sql = "SELECT * FROM fitguideUser WHERE usr_username='" . $login . "' OR usr_email='" . $login . "'";
     $data = GetData($sql);
     if ( count($data) == 1 )
     {

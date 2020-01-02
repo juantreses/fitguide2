@@ -486,20 +486,13 @@ section.section-four {
 
 /* The snackbar messages ------------------------------------------------------------------------------------------ */
 .breadcrumb-item, .breadcrumb {
-  background: #288;
+  background: #872525;
   color: white;
   border-radius: 0;
-  margin-bottom: 0;
-  width: 300px;
-  justify-content: center;
-}
+  margin-bottom: 0; }
 
 .breadcrumb-item.active {
-  color: white;
-  text-align: center;
-}
-
-
+  color: white; }
 
 /* Registratiepagina---------------------------------------------------------------------*/
 div.picregistratie {
@@ -602,6 +595,12 @@ form {
         line-height: 1.6;
         text-align: left;
         letter-spacing: 0; }
+    form ul a {
+      text-decoration: underline;
+      color: #FC3;
+      transition: all 500ms; }
+      form ul a:hover {
+        color: white; }
   form input[type="Submit"], form button {
     width: 100%;
     padding: 1em 1.5em;
@@ -639,20 +638,8 @@ form {
 
 /*loginpage------------------------------------------------------------*/
 div.piclogin {
-  background: url("../images/loginbanner.png") center/cover no-repeat;
+  background: url("../images/benchpress.png") center/cover no-repeat;
   height: 183px; }
-
-.loginbutton {
-  text-align: center;
-  align-content: center;
-  max-width: 20%; }
-.test{justify-content: center;}
-.inputlogin{
-  max-width: 40%;
-  display: flex;
-  flex-direction: column;
-
-}
 
 /*Userpage------------------------------------------------------------------*/
 body.userpagina {
