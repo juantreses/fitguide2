@@ -601,10 +601,17 @@ form {
       transition: all 500ms; }
       form ul a:hover {
         color: white; }
+  form .buttonholder {
+    width: 100%; }
+    form .buttonholder .buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start; }
   form input[type="Submit"], form button {
     width: 100%;
     padding: 1em 1.5em;
-    margin: .5em 0;
+    margin: .5em;
     background: white;
     border: none;
     cursor: pointer;
@@ -635,6 +642,8 @@ form {
     opacity: 1; }
   form .step.finish {
     background-color: #4CAF51; }
+  form .personal ul input, form .personal ul select {
+    width: unset; }
 
 /*loginpage------------------------------------------------------------*/
 div.piclogin {
@@ -738,7 +747,7 @@ section.noaccess h1 {
   text-align: left;
   letter-spacing: 0;
   text-transform: uppercase;
-  margin-left: 20px;
+  margin: 20px;
   text-align: center; }
 section.noaccess h2 {
   color: #FC3;
@@ -750,9 +759,9 @@ section.noaccess h2 {
   text-align: left;
   letter-spacing: 0;
   text-transform: uppercase;
-  margin-left: 20px; }
+  margin: 20px; }
 section.noaccess p {
-  margin-left: 20px; }
+  margin: 20px; }
 section.noaccess button {
   background-color: #288;
   border: none;

@@ -366,10 +366,19 @@ form {
     }
     }
 
+  .buttonholder {
+    width: 100%;
+
+    .buttons {
+      @include flex(row, space-between);
+
+    }
+  }
+
     input[type="Submit"], button {
       width: 100%;
       padding: 1em 1.5em;
-      margin: .5em 0;
+      margin: .5em;
       background: $wit;
       border: none;
       cursor: pointer;
@@ -400,6 +409,12 @@ form {
   }
   .step.finish {
     background-color: #4CAF51;
+  }
+
+  .personal {
+    ul input, ul select {
+      width: unset;
+    }
   }
 }
 
@@ -521,18 +536,18 @@ section.noaccess {
   h1 {
     @include font($secondary, 700, 2rem);
     text-transform: uppercase;
-    margin-left: 20px;
+    margin: 20px;
     text-align: center;
   }
 
   h2 {
     @include font($main, 700, 2rem);
     text-transform: uppercase;
-    margin-left: 20px;
+    margin: 20px;
   }
 
   p {
-    margin-left: 20px;
+    margin: 20px;
   }
 
   button {
