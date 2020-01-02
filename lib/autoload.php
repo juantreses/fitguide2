@@ -9,7 +9,7 @@ require_once "view_functions.php";      //basic_head, load_template, replacecont
 require_once "show_messages.php";
 require_once "authorization.php";
 
-if ( ! isset($_SESSION['usr']) AND ! $register AND ! $index AND ! $login)
+if ( ! isset($_SESSION['usr']) AND ! $register AND ! $index AND ! $login AND ! $no_access)
 {
     ! $index ? $redirect = "Location: ". $_application_folder ."no_access.php?index=true" : $redirect = "Location: ". $_application_folder ."no_access.php?index=false" ;
     header( $redirect );

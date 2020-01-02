@@ -515,6 +515,48 @@ tr:nth-of-type(even){
 
 }
 
+/* No Access -------------------------------------------------------------------------------------------------------*/
+
+section.noaccess {
+  h1 {
+    @include font($secondary, 700, 2rem);
+    text-transform: uppercase;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    @include font($main, 700, 2rem);
+    text-transform: uppercase;
+    margin-left: 20px;
+  }
+
+  p {
+    margin-left: 20px;
+  }
+
+  button {
+    background-color: $secondary;
+    border: none;
+    color: white;
+    padding: 18px 38px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    margin: 4px 20px;
+    cursor: pointer;
+    width: 163px;
+    margin-bottom: 30px;
+
+    &:hover {
+      background: $donker;
+      color: $secondary;
+    }
+  }
+}
+
+
 /* Footer -----------------------------------------------------------------------------------------------------------*/
 
 footer {

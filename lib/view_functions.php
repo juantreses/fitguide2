@@ -59,8 +59,6 @@ function PrintNavBar()
         $sql = Navigatie("Login", "Register");
         $data = GetData($sql);
 
-        var_dump($sql);
-
 
         foreach( $data as $r => $row )
         {
