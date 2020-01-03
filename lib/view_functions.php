@@ -95,3 +95,103 @@ function PrintNavBar()
         PrintNestedTemplate("navbar_item", "navbar", $data);
     }
 }
+
+function PrintDagBoek()
+{
+    $year = (isset($_GET['year'])) ? $_GET['year'] : date("Y");
+    $week = (isset($_GET['week'])) ? $_GET['week'] : date("W");
+    if ($week > 52) {
+        $year++;
+        $week = 1;
+    } elseif ($week < 1) {
+        $year--;
+        $week = 52;
+    }
+    ?>
+    <section class="traininglog">
+        <h2>My Fitlog</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Dagen</th>
+            <th>Datum</th>
+            <th>Oefeningen</th>
+            <th>Resultaat</th>
+        </tr>
+        </thead>
+    <?php
+    if ($week < 10) {
+        $week = '0' . $week;
+    }
+
+    for ($day = 1; $day <= 7; $day++) {
+        $d = strtotime($year . "W" . $week . $day);
+        $sqldate = date("Y/m/d", $d);
+
+        $sql = "SELECT * FROM fitguideDagboek
+                    INNER JOIN fitguideOefening fO on fO.oef_id = dag_oef_id
+                WHERE dag_datum ='" . $sqldate . "' AND dag_usr_id ='" . $_SESSION['usr']['usr_id'] . "'";
+        $data = GetData($sql);
+
+
+        $oefeningen = array();
+        $resultaten = array();
+
+        $i = 0;
+
+        foreach ($data as $row) {
+            $post = $data[$i]['dag_id'];
+            $link = "lib/deleteblog.php?post=$post";
+            $i++;
+
+            $oefeningen[] = $row['oef_naam'];
+            $resultaten[] = $row['dag_resultaat'] . '<br><a href='. "$link" .' . title="Deze knop verwijdert je oefening uit het dagboek"><button class="btn btn-danger">Delete</button></a>';
+
+
+
+        }
+
+        $oefenlijst = "<ul class='list-unstyled'><li>" . implode("</li><li>", $oefeningen) . "</li></ul>";
+        $resultatenlijst = "<ul class='list-unstyled'><li>" . implode("</li><li>", $resultaten) . "</li></ul>";
+
+
+
+        echo "<tr>";
+        echo "<td>" . date("l", $d) . "</td>";
+        echo "<td>" . date("d/m/Y", $d) . "</td>";
+        echo "<td>" . $oefenlijst . "</td>";
+        echo "<td>" . $resultatenlijst . "</td>";
+        echo "</tr>";
+    }
+
+    echo "</table>";
+
+    $link_vorige = "user.php?week=" . ($week == 1 ? 52 : $week - 1) . "&year=" . ($week == 1 ? $year - 1 : $year);
+    $link_volgende = "user.php?week=" . ($week == 52 ? 1 : $week + 1) . "&year=" . ($week == 52 ? $year + 1 : $year);
+    echo "<a href=$link_vorige>Vorige Week</a>&nbsp";
+    echo "<a href=$link_volgende>Volgende Week</a>&nbsp";
+    echo "</section>";
+}
+
+function PrintRec($fitlevel, $lowestfit)
+{
+    $data = GetData("Select lic_naam from fitguideLichaamsdeel
+                                where lic_naam = '$lowestfit'");
+
+    //template voor 1 item samenvoegen met data voor items
+    $template_user_schema = LoadTemplate("user_recomendations");
+    print ReplaceContent($data, $template_user_schema);
+
+    $data2 = GetData("Select lic_naam from fitguideLichaamsdeel");
+    $template_tabs = LoadTemplate("user_exercises_tabs");
+    echo "<div class='tabs'>";
+    print ReplaceContent($data2, $template_tabs);
+    echo "</div>";
+
+    $data3 = GetData("Select oef_naam, lic_naam, oef_level_gewicht, oef_level_herhalingen, oef_level_sets, oef_level_tijd from fitguideOefening o 
+                                inner join fitguideLichaamsdeel l on o.oef_lic_id = l.lic_id
+                                inner join fitguideOef_level ol on o.oef_id = ol.oef_level_oef_id
+                                where oef_level_lev_id = $fitlevel");
+    var_dump($data3);
+    PrintNestedTemplate("user_exercises_item","user_exercises", $data3);
+}

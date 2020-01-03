@@ -496,7 +496,7 @@ section.section-four {
 
 /* Registratiepagina---------------------------------------------------------------------*/
 div.picregistratie {
-  background: url("../images/benchpress.png") center/cover no-repeat;
+  background: url("../images/benchpress.jpg") center/cover no-repeat;
   height: 183px; }
 
 form {
@@ -647,94 +647,48 @@ form {
 
 /*loginpage------------------------------------------------------------*/
 div.piclogin {
-  background: url("../images/benchpress.png") center/cover no-repeat;
+  background: url("../images/loginbanner.png") center/cover no-repeat;
   height: 183px; }
 
 /*Userpage------------------------------------------------------------------*/
-body.userpagina {
-  background: url(https://subtlepatterns.com/patterns/use_your_illusion.png);
-  color: #eee;
-  font: 1em 'PT Sans', sans-serif; }
-
-::selection {
-  background-color: #4EC6DE; }
-
-.tabbed {
-  width: 700px;
-  margin: 50px auto; }
-
-.tabbed > input {
-  display: none; }
-
-.tabbed > label {
-  display: block;
+section h3 {
+  color: #288; }
+  section h3 span {
+    margin-right: 10px;
+    color: #FC3; }
+section.results {
+  width: 100%; }
+  section.results img {
+    width: 100%; }
+section.exercises .tabs {
   float: left;
-  padding: 12px 20px;
-  margin-right: 5px;
-  cursor: pointer;
-  transition: background-color .3s; }
-
-.tabbed > label:hover,
-.tabbed > input:checked + label {
-  background: #4EC6DE; }
-
-.tabs {
-  clear: both;
-  perspective: 600px; }
-
-.tabs > div {
-  width: 700px;
-  position: absolute;
-  border: 2px solid #4EC6DE;
-  padding: 10px 30px 40px;
-  line-height: 1.4em;
-  opacity: 0;
-  transform: rotateX(-20deg);
-  transform-origin: top center;
-  transition: opacity .3s, transform 1s;
-  z-index: 0; }
-
-#tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
-#tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
-#tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
-#tab-nav-4:checked ~ .tabs > div:nth-of-type(4),
-#tab-nav-5:checked ~ .tabs > div:nth-of-type(5) {
-  transform: rotateX(0);
-  opacity: 1;
-  z-index: 1; }
-
-@media screen and (max-width: 700px) {
-  .tabbed {
-    width: 400px; }
-
-  .tabbed > label {
-    display: none; }
-
-  .tabs > div {
-    width: 400px;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px; }
+  section.exercises .tabs button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
     border: none;
-    padding: 0;
-    opacity: 1;
-    position: relative;
-    transform: none;
-    margin-bottom: 60px; }
-
-  .tabs > div h2 {
-    border-bottom: 2px solid #4EC6DE;
-    padding-bottom: .5em; } }
-.fas {
-  color: white; }
-
-input.edit-stats {
-  background: #288;
-  color: black; }
-
-tr {
-  margin-bottom: 10px; }
-
-tr:nth-of-type(even) {
-  background: white;
-  color: black; }
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px; }
+    section.exercises .tabs button:hover {
+      background-color: #ddd; }
+    section.exercises .tabs button.active {
+      background-color: #ccc; }
+section.exercises .tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px; }
 
 /* No Access -------------------------------------------------------------------------------------------------------*/
 section.noaccess h1 {
