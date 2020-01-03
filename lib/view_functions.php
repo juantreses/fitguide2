@@ -185,13 +185,31 @@ function PrintRec($fitlevel, $lowestfit)
     $data2 = GetData("Select lic_naam from fitguideLichaamsdeel");
     $template_tabs = LoadTemplate("user_exercises_tabs");
     echo "<div class='tabs'>";
+    foreach ($data2 as $row => $r) {
+
+        if ($lowestfit == $data2[$row]['lic_naam']) {
+            $data2[$row]['default'] = "defaultOpen";
+        }
+        else {
+            $data2[$row]['default'] = "";
+        }
+    }
     print ReplaceContent($data2, $template_tabs);
     echo "</div>";
 
-    $data3 = GetData("Select oef_naam, lic_naam, oef_level_gewicht, oef_level_herhalingen, oef_level_sets, oef_level_tijd from fitguideOefening o 
-                                inner join fitguideLichaamsdeel l on o.oef_lic_id = l.lic_id
+    $data3 = GetData("Select oef_naam, lic_naam from fitguideOefening o 
                                 inner join fitguideOef_level ol on o.oef_id = ol.oef_level_oef_id
+                                inner join fitguideLichaamsdeel l on o.oef_lic_id = l.lic_id
                                 where oef_level_lev_id = $fitlevel");
-    var_dump($data3);
-    PrintNestedTemplate("user_exercises_item","user_exercises", $data3);
+
+
+
+    $template_exercise_item = LoadTemplate("user_exercises_item");
+    $exercise_items = ReplaceContent($data3, $template_exercise_item);
+
+    //navbar template samenvoegen met resultaat ($navbar_items)
+    $data = array( "item" => $exercise_items ) ;
+    $template_exercises = LoadTemplate("user_exercises");
+    print ReplaceContentOneRow($data, $template_exercises);
+
 }

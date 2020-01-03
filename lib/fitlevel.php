@@ -70,10 +70,10 @@ function LowestFit() {
     $resultaatwall = $fitdata['fitwall'];
 
 
-    if ($resultaatpush < $resultaatsit and $resultaatpush < $resultaatwall) return "arms";
+    if ($resultaatpush < $resultaatsit and $resultaatpush < $resultaatwall) return "Arms";
 
-    elseif ($resultaatsit < $resultaatpush and $resultaatsit < $resultaatwall) return "abs";
+    elseif ($resultaatsit < $resultaatpush and $resultaatsit < $resultaatwall) return "Abs";
 
-    else return "legs";
+    else return "Legs";
 }
 
