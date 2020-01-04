@@ -438,6 +438,30 @@ section {
     }
   }
 
+  .container {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px;
+  }
+
+  button {
+    background-color: $secondary;
+    border: none;
+    color: white;
+    padding: 18px 38px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    &:hover {
+      background: $donker;
+      color: $secondary;
+    }
+  }
+
   &.stats {
     border-bottom: $main solid 2px;
     h1 {
@@ -454,49 +478,64 @@ section {
       display: grid;
       grid-template: auto/1fr 1fr;
     }
-
-    .container {
-      width: 100%;
-      text-align: center;
-      margin: 20px 0px;
-
-      button {
-        background-color: $secondary;
-        border: none;
-        color: white;
-        padding: 18px 38px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 19px;
-        margin: 4px 2px;
-        cursor: pointer;
-
-        &:hover {
-          background: $donker;
-          color: $secondary;
-        }
-      }
-    }
   }
 
   &.results {
     width: 100%;
+    border-bottom: $main solid 2px;
 
-    img {
-      width: 100%;
+    h2 {
+      @include font($zwart, 700, 1.8rem, $hoofdfont, normal, 1.6, center);
+      text-transform: uppercase;
+      margin: 20px 0px;
+    }
+
+    article {
+      margin-bottom: 60px;
+
+      h3 {
+        @include font($main, 700, 1.3rem);
+        text-transform: uppercase;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      em {
+        color: $secondary;
+        font-weight: 700;
+      }
     }
   }
 
   &.exercises {
+    border-bottom: $main solid 2px;
+
+    h2 {
+      @include font($zwart, 700, 1.8rem, $hoofdfont, normal, 1.6, center);
+      text-transform: uppercase;
+      margin: 20px 0px;
+    }
+
+    p {
+      @include font($zwart, 400, 1rem, $hoofdfont, normal, 1.6, left);
+
+      em {
+        color: $secondary;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+
     .tabs {
       @include flex();
       border: 1px solid #ccc;
-      background-color: #f1f1f1;
+      background-color: $licht;
 
       button {
         display: block;
-        background-color: inherit;
+        background-color: $licht;
         color: black;
         padding: 22px 16px;
         width: 100%;
@@ -508,25 +547,21 @@ section {
         font-size: 17px;
 
         &:hover {
-          background-color: #ddd;
+          background-color: $secondary;
         }
         &.active {
-          background-color: #ccc;
+          background-color: $main;
         }
       }
     }
     .tabcontent {
       padding: 0px 12px;
       border: 1px solid #ccc;
-      border-left: none;
       height: 100%;
+      margin-bottom: 40px;
 
-      h3 {
-        text-align: center;
-      }
-
-      p span {
-        display: block;
+      a {
+        text-decoration: underline;
       }
     }
   }

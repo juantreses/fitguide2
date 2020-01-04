@@ -222,6 +222,7 @@ function PrintRec($fitlevel, $lowestfit)
         $template_exercises = LoadTemplate("user_exercises");
         print ReplaceContentOneRow($data, $template_exercises);
     }
+    print "</section>";
 }
 
 function PrintUserLog()

@@ -665,6 +665,24 @@ section {
     section h3 span {
       margin-right: 10px;
       color: #FC3; }
+  section .container {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px; }
+  section button {
+    background-color: #288;
+    border: none;
+    color: white;
+    padding: 18px 38px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    margin: 4px 2px;
+    cursor: pointer; }
+    section button:hover {
+      background: #111;
+      color: #288; }
   section.stats {
     border-bottom: #FC3 solid 2px; }
     section.stats h1 {
@@ -690,60 +708,93 @@ section {
     section.stats article {
       display: grid;
       grid-template: auto/1fr 1fr; }
-    section.stats .container {
-      width: 100%;
-      text-align: center;
-      margin: 20px 0px; }
-      section.stats .container button {
-        background-color: #288;
-        border: none;
-        color: white;
-        padding: 18px 38px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 19px;
-        margin: 4px 2px;
-        cursor: pointer; }
-        section.stats .container button:hover {
-          background: #111;
-          color: #288; }
   section.results {
-    width: 100%; }
-    section.results img {
-      width: 100%; }
-  section.exercises .tabs {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1; }
-    section.exercises .tabs button {
-      display: block;
-      background-color: inherit;
+    width: 100%;
+    border-bottom: #FC3 solid 2px; }
+    section.results h2 {
       color: black;
-      padding: 22px 16px;
-      width: 100%;
-      border: none;
-      outline: none;
+      font-weight: 700;
+      font-size: 1.8rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: center;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      margin: 20px 0px; }
+    section.results article {
+      margin-bottom: 60px; }
+      section.results article h3 {
+        color: #FC3;
+        font-weight: 700;
+        font-size: 1.3rem;
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0;
+        text-transform: uppercase; }
+      section.results article img {
+        width: 100%; }
+      section.results article em {
+        color: #288;
+        font-weight: 700; }
+  section.exercises {
+    border-bottom: #FC3 solid 2px; }
+    section.exercises h2 {
+      color: black;
+      font-weight: 700;
+      font-size: 1.8rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: center;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      margin: 20px 0px; }
+    section.exercises p {
+      color: black;
+      font-weight: 400;
+      font-size: 1rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
       text-align: left;
-      cursor: pointer;
-      transition: 0.3s;
-      font-size: 17px; }
-      section.exercises .tabs button:hover {
-        background-color: #ddd; }
-      section.exercises .tabs button.active {
-        background-color: #ccc; }
-  section.exercises .tabcontent {
-    padding: 0px 12px;
-    border: 1px solid #ccc;
-    border-left: none;
-    height: 100%; }
-    section.exercises .tabcontent h3 {
-      text-align: center; }
-    section.exercises .tabcontent p span {
-      display: block; }
+      letter-spacing: 0; }
+      section.exercises p em {
+        color: #288;
+        text-transform: uppercase;
+        font-weight: 700; }
+    section.exercises .tabs {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      border: 1px solid #ccc;
+      background-color: #EEE; }
+      section.exercises .tabs button {
+        display: block;
+        background-color: #EEE;
+        color: black;
+        padding: 22px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px; }
+        section.exercises .tabs button:hover {
+          background-color: #288; }
+        section.exercises .tabs button.active {
+          background-color: #FC3; }
+    section.exercises .tabcontent {
+      padding: 0px 12px;
+      border: 1px solid #ccc;
+      height: 100%;
+      margin-bottom: 40px; }
+      section.exercises .tabcontent a {
+        text-decoration: underline; }
 
 /* No Access -------------------------------------------------------------------------------------------------------*/
 section.noaccess h1 {
