@@ -202,14 +202,24 @@ function PrintRec($fitlevel, $lowestfit)
                                 inner join fitguideLichaamsdeel l on o.oef_lic_id = l.lic_id
                                 where oef_level_lev_id = $fitlevel");
 
+    $i = 0;
 
+    foreach ($data2 as $row => $r) {
 
-    $template_exercise_item = LoadTemplate("user_exercises_item");
-    $exercise_items = ReplaceContent($data3, $template_exercise_item);
+        if ($r['lic_naam'] == $data3[$i]['lic_naam']) {
+            $template_exercise_item = LoadTemplate("user_exercises_item");
+            $sql ="Select oef_naam, lic_naam, oef_link, oef_level_sets, oef_level_herhalingen, oef_level_gewicht, oef_level_tijd from fitguideOefening o 
+                                inner join fitguideOef_level ol on o.oef_id = ol.oef_level_oef_id
+                                inner join fitguideLichaamsdeel l on o.oef_lic_id = l.lic_id
+                                where oef_level_lev_id = $fitlevel and lic_naam = '" . $r['lic_naam'] . "'";
+            $data4 = GetData($sql);
+            $exercise_items = ReplaceContent($data4, $template_exercise_item);
+        }
 
-    //navbar template samenvoegen met resultaat ($navbar_items)
-    $data = array( "item" => $exercise_items ) ;
-    $template_exercises = LoadTemplate("user_exercises");
-    print ReplaceContentOneRow($data, $template_exercises);
+        $i += count($data4) + 1;
 
+        $data = array( "item" => $exercise_items, "lic_naam" => $r['lic_naam'] );
+        $template_exercises = LoadTemplate("user_exercises");
+        print ReplaceContentOneRow($data, $template_exercises);
+    }
 }

@@ -661,11 +661,12 @@ section.results {
   section.results img {
     width: 100%; }
 section.exercises .tabs {
-  float: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  width: 30%;
-  height: 100%; }
+  background-color: #f1f1f1; }
   section.exercises .tabs button {
     display: block;
     background-color: inherit;
@@ -683,12 +684,14 @@ section.exercises .tabs {
     section.exercises .tabs button.active {
       background-color: #ccc; }
 section.exercises .tabcontent {
-  float: left;
   padding: 0px 12px;
   border: 1px solid #ccc;
-  width: 70%;
   border-left: none;
   height: 100%; }
+  section.exercises .tabcontent h3 {
+    text-align: center; }
+  section.exercises .tabcontent p span {
+    display: block; }
 
 /* No Access -------------------------------------------------------------------------------------------------------*/
 section.noaccess h1 {
