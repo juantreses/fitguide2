@@ -651,47 +651,99 @@ div.piclogin {
   height: 183px; }
 
 /*Userpage------------------------------------------------------------------*/
-section h3 {
-  color: #288; }
-  section h3 span {
-    margin-right: 10px;
-    color: #FC3; }
-section.results {
-  width: 100%; }
-  section.results img {
-    width: 100%; }
-section.exercises .tabs {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1; }
-  section.exercises .tabs button {
-    display: block;
-    background-color: inherit;
-    color: black;
-    padding: 22px 16px;
-    width: 100%;
-    border: none;
-    outline: none;
+section {
+  padding: 0px 10px; }
+  section h3 {
+    color: #288;
+    font-weight: 700;
+    font-size: 100%;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
     text-align: left;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 17px; }
-    section.exercises .tabs button:hover {
-      background-color: #ddd; }
-    section.exercises .tabs button.active {
-      background-color: #ccc; }
-section.exercises .tabcontent {
-  padding: 0px 12px;
-  border: 1px solid #ccc;
-  border-left: none;
-  height: 100%; }
-  section.exercises .tabcontent h3 {
-    text-align: center; }
-  section.exercises .tabcontent p span {
-    display: block; }
+    letter-spacing: 0; }
+    section h3 span {
+      margin-right: 10px;
+      color: #FC3; }
+  section.stats {
+    border-bottom: #FC3 solid 2px; }
+    section.stats h1 {
+      color: black;
+      font-weight: 700;
+      font-size: 1.8rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: center;
+      letter-spacing: 0;
+      margin-bottom: 20px; }
+    section.stats h2 {
+      color: black;
+      font-weight: 700;
+      font-size: 1.2rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: left;
+      letter-spacing: 0;
+      margin-bottom: 20px; }
+    section.stats article {
+      display: grid;
+      grid-template: auto/1fr 1fr; }
+    section.stats .container {
+      width: 100%;
+      text-align: center;
+      margin: 20px 0px; }
+      section.stats .container button {
+        background-color: #288;
+        border: none;
+        color: white;
+        padding: 18px 38px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 19px;
+        margin: 4px 2px;
+        cursor: pointer; }
+        section.stats .container button:hover {
+          background: #111;
+          color: #288; }
+  section.results {
+    width: 100%; }
+    section.results img {
+      width: 100%; }
+  section.exercises .tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1; }
+    section.exercises .tabs button {
+      display: block;
+      background-color: inherit;
+      color: black;
+      padding: 22px 16px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px; }
+      section.exercises .tabs button:hover {
+        background-color: #ddd; }
+      section.exercises .tabs button.active {
+        background-color: #ccc; }
+  section.exercises .tabcontent {
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    border-left: none;
+    height: 100%; }
+    section.exercises .tabcontent h3 {
+      text-align: center; }
+    section.exercises .tabcontent p span {
+      display: block; }
 
 /* No Access -------------------------------------------------------------------------------------------------------*/
 section.noaccess h1 {
