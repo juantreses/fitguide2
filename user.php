@@ -28,6 +28,8 @@ $template = LoadTemplate("user");
 
 print ReplaceContent($data,$template);
 PrintRec($fitlevel, $lowestfit);
+PrintDagBoek();
+PrintUserLog();
     ?>
 </main>
 <script>

@@ -223,3 +223,21 @@ function PrintRec($fitlevel, $lowestfit)
         print ReplaceContentOneRow($data, $template_exercises);
     }
 }
+
+function PrintUserLog()
+{
+    $data = GetData("select * from fitguideOefening");
+
+    //template voor 1 item samenvoegen met data voor items
+    $template_select_item = LoadTemplate("select_oefening_item");
+    $select_items = ReplaceContent($data, $template_select_item);
+
+    //navbar template samenvoegen met resultaat ($navbar_items)
+    $data = array( "select_items" => $select_items ) ;
+    $template_select = LoadTemplate("select_oefening");
+    $select = ReplaceContentOneRow($data, $template_select);
+
+    $data = array( "select" => $select );
+    $template_user_log = LoadTemplate("user_log");
+    print ReplaceContentOneRow($data, $template_user_log);
+};

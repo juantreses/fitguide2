@@ -1,0 +1,17 @@
+<form action="lib/saveblog.php" method="post">
+
+    <input type="hidden" id="formname" name="formname" value="user">
+    <input type="hidden" id="afterinsert" name="afterinsert" value="user.php">
+    <input type="hidden" id="tablename" name="tablename" value="fitguideDagboek">
+    <input type="hidden" id="pkey" name="pkey" value="usr_id">
+    <input type="hidden" id="usr_id" name="usr_id" value="usr_id">
+
+    <h2>Keep track of your progress</h2>
+    <label for="dag_datum"><br>
+    </label>
+    <input type="date" id="dag_datum" name="dag_datum" value="">
+    @@select@@
+    <label for="dag_resultaat"></label>
+    <textarea maxlength="100" placeholder="Shortly describe how your exercise went (Did you do all reps? Did you use the right weight? Etc.)" name="dag_resultaat" id="dag_resultaat"></textarea>
+    <input name="savebutton" type="submit" value="Save">
+</form>
