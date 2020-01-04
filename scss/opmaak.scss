@@ -428,8 +428,6 @@ div.piclogin {
 /*Userpage------------------------------------------------------------------*/
 
 section {
-  padding: 0px 10px;
-
   h3 {
     @include font($secondary, 700);
     span {
@@ -470,11 +468,13 @@ section {
     }
 
     h2 {
+      padding: 0px 10px;
       @include font($zwart, 700, 1.2rem, $hoofdfont, normal, 1.6, left);
       margin-bottom: 20px
     }
 
     article {
+      padding: 0px 10px;
       display: grid;
       grid-template: auto/1fr 1fr;
     }
@@ -492,6 +492,7 @@ section {
 
     article {
       margin-bottom: 60px;
+      padding: 0px 10px;
 
       h3 {
         @include font($main, 700, 1.3rem);
@@ -519,6 +520,7 @@ section {
     }
 
     p {
+      padding: 0px 10px;
       @include font($zwart, 400, 1rem, $hoofdfont, normal, 1.6, left);
 
       em {
@@ -526,6 +528,10 @@ section {
         text-transform: uppercase;
         font-weight: 700;
       }
+    }
+
+    article {
+      padding: 0px 10px;
     }
 
     .tabs {
@@ -563,6 +569,101 @@ section {
       a {
         text-decoration: underline;
       }
+    }
+  }
+
+  &.traininglog {
+    h2 {
+      @include font($zwart, 700, 1.8rem, $hoofdfont, normal, 1.6, center);
+      text-transform: uppercase;
+      margin: 20px 0px;
+    }
+
+    p {
+      @include font($zwart, 400, 1rem, $hoofdfont, normal, 1.6, left);
+      padding: 0px 10px;
+
+      em {
+        color: $secondary;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      &:last-of-type {
+        margin-bottom: 60px;
+      }
+    }
+
+    table {
+      background: $main;
+      width: 100%;
+      padding: 0px 10px;
+      min-height: 400px;
+
+      thead {
+        tr {
+          display: grid;
+          grid-template: auto/1fr 1fr 1fr;
+          th {
+            padding: 30px 10px;
+            @include font($wit, 700, 1.3rem);
+            border-bottom: $wit solid 2px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          display: grid;
+          grid-template: auto/1fr 1fr 1fr;
+          min-height: 57px;
+            td {
+              padding: 10px 10px;
+              border-right: $wit solid 2px;
+
+              &:first-of-type {
+                color: white;
+              }
+
+              &:nth-child(n+2) {
+                background-color: #FFEE99;
+              }
+
+              ul:nth-of-type(1) {
+                li {
+                  @include flex(row, space-between);
+                }
+              }
+            }
+          &:nth-of-type(even) {
+            td:nth-child(n+2) {
+              background-color: #FFFFCC;
+            }
+          }
+        }
+      }
+    }
+    div.buttonholder {
+      @include flex(row, space-around);
+    }
+  }
+  &.log {
+    form {
+      textarea {
+        width: 100%;
+        padding: 1em 1.5em;
+        margin: .5em;
+        background: none;
+        border: solid 2px $wit;
+        height: 200px;
+        @include font($wit, 400, 1.2rem);
+
+        @include input-placeholder {
+          @include font($wit, 400, 1.2rem);
+        }
+      }
+    }
+    img {
+      width: 100%;
     }
   }
 }

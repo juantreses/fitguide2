@@ -651,150 +651,285 @@ div.piclogin {
   height: 183px; }
 
 /*Userpage------------------------------------------------------------------*/
-section {
-  padding: 0px 10px; }
-  section h3 {
-    color: #288;
+section h3 {
+  color: #288;
+  font-weight: 700;
+  font-size: 100%;
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  font-style: normal;
+  line-height: 1.6;
+  text-align: left;
+  letter-spacing: 0; }
+  section h3 span {
+    margin-right: 10px;
+    color: #FC3; }
+section .container {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0px; }
+section button {
+  background-color: #288;
+  border: none;
+  color: white;
+  padding: 18px 38px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 19px;
+  margin: 4px 2px;
+  cursor: pointer; }
+  section button:hover {
+    background: #111;
+    color: #288; }
+section.stats {
+  border-bottom: #FC3 solid 2px; }
+  section.stats h1 {
+    color: black;
     font-weight: 700;
-    font-size: 100%;
+    font-size: 1.8rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0;
+    margin-bottom: 20px; }
+  section.stats h2 {
+    padding: 0px 10px;
+    color: black;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: left;
+    letter-spacing: 0;
+    margin-bottom: 20px; }
+  section.stats article {
+    padding: 0px 10px;
+    display: grid;
+    grid-template: auto/1fr 1fr; }
+section.results {
+  width: 100%;
+  border-bottom: #FC3 solid 2px; }
+  section.results h2 {
+    color: black;
+    font-weight: 700;
+    font-size: 1.8rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin: 20px 0px; }
+  section.results article {
+    margin-bottom: 60px;
+    padding: 0px 10px; }
+    section.results article h3 {
+      color: #FC3;
+      font-weight: 700;
+      font-size: 1.3rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: left;
+      letter-spacing: 0;
+      text-transform: uppercase; }
+    section.results article img {
+      width: 100%; }
+    section.results article em {
+      color: #288;
+      font-weight: 700; }
+section.exercises {
+  border-bottom: #FC3 solid 2px; }
+  section.exercises h2 {
+    color: black;
+    font-weight: 700;
+    font-size: 1.8rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin: 20px 0px; }
+  section.exercises p {
+    padding: 0px 10px;
+    color: black;
+    font-weight: 400;
+    font-size: 1rem;
     font-family: "IBM Plex Sans", Arial, sans-serif;
     font-style: normal;
     line-height: 1.6;
     text-align: left;
     letter-spacing: 0; }
-    section h3 span {
-      margin-right: 10px;
-      color: #FC3; }
-  section .container {
-    width: 100%;
-    text-align: center;
-    margin: 20px 0px; }
-  section button {
-    background-color: #288;
-    border: none;
+    section.exercises p em {
+      color: #288;
+      text-transform: uppercase;
+      font-weight: 700; }
+  section.exercises article {
+    padding: 0px 10px; }
+  section.exercises .tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid #ccc;
+    background-color: #EEE; }
+    section.exercises .tabs button {
+      display: block;
+      background-color: #EEE;
+      color: black;
+      padding: 22px 16px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px; }
+      section.exercises .tabs button:hover {
+        background-color: #288; }
+      section.exercises .tabs button.active {
+        background-color: #FC3; }
+  section.exercises .tabcontent {
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    height: 100%;
+    margin-bottom: 40px; }
+    section.exercises .tabcontent a {
+      text-decoration: underline; }
+section.traininglog h2 {
+  color: black;
+  font-weight: 700;
+  font-size: 1.8rem;
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  font-style: normal;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin: 20px 0px; }
+section.traininglog p {
+  color: black;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  font-style: normal;
+  line-height: 1.6;
+  text-align: left;
+  letter-spacing: 0;
+  padding: 0px 10px; }
+  section.traininglog p em {
+    color: #288;
+    text-transform: uppercase;
+    font-weight: 700; }
+  section.traininglog p:last-of-type {
+    margin-bottom: 60px; }
+section.traininglog table {
+  background: #FC3;
+  width: 100%;
+  padding: 0px 10px;
+  min-height: 400px; }
+  section.traininglog table thead tr {
+    display: grid;
+    grid-template: auto/1fr 1fr 1fr; }
+    section.traininglog table thead tr th {
+      padding: 30px 10px;
+      color: white;
+      font-weight: 700;
+      font-size: 1.3rem;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: left;
+      letter-spacing: 0;
+      border-bottom: white solid 2px; }
+  section.traininglog table tbody tr {
+    display: grid;
+    grid-template: auto/1fr 1fr 1fr;
+    min-height: 57px; }
+    section.traininglog table tbody tr td {
+      padding: 10px 10px;
+      border-right: white solid 2px; }
+      section.traininglog table tbody tr td:first-of-type {
+        color: white; }
+      section.traininglog table tbody tr td:nth-child(n+2) {
+        background-color: #FFEE99; }
+      section.traininglog table tbody tr td ul:nth-of-type(1) li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start; }
+    section.traininglog table tbody tr:nth-of-type(even) td:nth-child(n+2) {
+      background-color: #FFFFCC; }
+section.traininglog div.buttonholder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start; }
+section.log form textarea {
+  width: 100%;
+  padding: 1em 1.5em;
+  margin: .5em;
+  background: none;
+  border: solid 2px white;
+  height: 200px;
+  color: white;
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  font-style: normal;
+  line-height: 1.6;
+  text-align: left;
+  letter-spacing: 0; }
+  section.log form textarea.placeholder {
     color: white;
-    padding: 18px 38px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 19px;
-    margin: 4px 2px;
-    cursor: pointer; }
-    section button:hover {
-      background: #111;
-      color: #288; }
-  section.stats {
-    border-bottom: #FC3 solid 2px; }
-    section.stats h1 {
-      color: black;
-      font-weight: 700;
-      font-size: 1.8rem;
-      font-family: "IBM Plex Sans", Arial, sans-serif;
-      font-style: normal;
-      line-height: 1.6;
-      text-align: center;
-      letter-spacing: 0;
-      margin-bottom: 20px; }
-    section.stats h2 {
-      color: black;
-      font-weight: 700;
-      font-size: 1.2rem;
-      font-family: "IBM Plex Sans", Arial, sans-serif;
-      font-style: normal;
-      line-height: 1.6;
-      text-align: left;
-      letter-spacing: 0;
-      margin-bottom: 20px; }
-    section.stats article {
-      display: grid;
-      grid-template: auto/1fr 1fr; }
-  section.results {
-    width: 100%;
-    border-bottom: #FC3 solid 2px; }
-    section.results h2 {
-      color: black;
-      font-weight: 700;
-      font-size: 1.8rem;
-      font-family: "IBM Plex Sans", Arial, sans-serif;
-      font-style: normal;
-      line-height: 1.6;
-      text-align: center;
-      letter-spacing: 0;
-      text-transform: uppercase;
-      margin: 20px 0px; }
-    section.results article {
-      margin-bottom: 60px; }
-      section.results article h3 {
-        color: #FC3;
-        font-weight: 700;
-        font-size: 1.3rem;
-        font-family: "IBM Plex Sans", Arial, sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: left;
-        letter-spacing: 0;
-        text-transform: uppercase; }
-      section.results article img {
-        width: 100%; }
-      section.results article em {
-        color: #288;
-        font-weight: 700; }
-  section.exercises {
-    border-bottom: #FC3 solid 2px; }
-    section.exercises h2 {
-      color: black;
-      font-weight: 700;
-      font-size: 1.8rem;
-      font-family: "IBM Plex Sans", Arial, sans-serif;
-      font-style: normal;
-      line-height: 1.6;
-      text-align: center;
-      letter-spacing: 0;
-      text-transform: uppercase;
-      margin: 20px 0px; }
-    section.exercises p {
-      color: black;
-      font-weight: 400;
-      font-size: 1rem;
-      font-family: "IBM Plex Sans", Arial, sans-serif;
-      font-style: normal;
-      line-height: 1.6;
-      text-align: left;
-      letter-spacing: 0; }
-      section.exercises p em {
-        color: #288;
-        text-transform: uppercase;
-        font-weight: 700; }
-    section.exercises .tabs {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: flex-start;
-      border: 1px solid #ccc;
-      background-color: #EEE; }
-      section.exercises .tabs button {
-        display: block;
-        background-color: #EEE;
-        color: black;
-        padding: 22px 16px;
-        width: 100%;
-        border: none;
-        outline: none;
-        text-align: left;
-        cursor: pointer;
-        transition: 0.3s;
-        font-size: 17px; }
-        section.exercises .tabs button:hover {
-          background-color: #288; }
-        section.exercises .tabs button.active {
-          background-color: #FC3; }
-    section.exercises .tabcontent {
-      padding: 0px 12px;
-      border: 1px solid #ccc;
-      height: 100%;
-      margin-bottom: 40px; }
-      section.exercises .tabcontent a {
-        text-decoration: underline; }
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: left;
+    letter-spacing: 0; }
+  section.log form textarea:-moz-placeholder {
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: left;
+    letter-spacing: 0; }
+  section.log form textarea::-moz-placeholder {
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: left;
+    letter-spacing: 0; }
+  section.log form textarea:-ms-input-placeholder {
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: left;
+    letter-spacing: 0; }
+  section.log form textarea::-webkit-input-placeholder {
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: left;
+    letter-spacing: 0; }
+section.log img {
+  width: 100%; }
 
 /* No Access -------------------------------------------------------------------------------------------------------*/
 section.noaccess h1 {

@@ -100,6 +100,7 @@ function PrintDagBoek()
 {
     $year = (isset($_GET['year'])) ? $_GET['year'] : date("Y");
     $week = (isset($_GET['week'])) ? $_GET['week'] : date("W");
+
     if ($week > 52) {
         $year++;
         $week = 1;
@@ -108,24 +109,27 @@ function PrintDagBoek()
         $week = 52;
     }
     ?>
-    <section class="traininglog">
+    <section class="traininglog" id="traininglog">
         <h2>My Fitlog</h2>
+        <p>Here you can keep track of your <em>progress</em>. Select which exercise you did on which day and add it to the calendar.
+        You can give a little description how much weight you used or how many sets and repetitions you did.</p>
+        <p>Keeping track of your progress helps you to stay <em>motivated</em>.</p>
     <table>
         <thead>
         <tr>
-            <th>Dagen</th>
-            <th>Datum</th>
-            <th>Oefeningen</th>
-            <th>Resultaat</th>
+            <th>Date</th>
+            <th>Exercises</th>
+            <th>Result</th>
         </tr>
         </thead>
     <?php
-    if ($week < 10) {
+    if (isset($_GET['week']) and $week < 10) {
         $week = '0' . $week;
     }
 
     for ($day = 1; $day <= 7; $day++) {
         $d = strtotime($year . "W" . $week . $day);
+
         $sqldate = date("Y/m/d", $d);
 
         $sql = "SELECT * FROM fitguideDagboek
@@ -144,8 +148,8 @@ function PrintDagBoek()
             $link = "lib/deleteblog.php?post=$post";
             $i++;
 
-            $oefeningen[] = $row['oef_naam'];
-            $resultaten[] = $row['dag_resultaat'] . '<br><a href='. "$link" .' . title="Deze knop verwijdert je oefening uit het dagboek"><button class="btn btn-danger">Delete</button></a>';
+            $oefeningen[] = $row['oef_naam'] . '<a href='. "$link" .' . title="Deze knop verwijdert je oefening uit het dagboek">(Delete)</a>';
+            $resultaten[] = $row['dag_resultaat'];
 
 
 
@@ -157,19 +161,19 @@ function PrintDagBoek()
 
 
         echo "<tr>";
-        echo "<td>" . date("l", $d) . "</td>";
         echo "<td>" . date("d/m/Y", $d) . "</td>";
         echo "<td>" . $oefenlijst . "</td>";
         echo "<td>" . $resultatenlijst . "</td>";
         echo "</tr>";
     }
 
+    $link_vorige = "user.php?week=" . ($week == 1 ? 52 : $week - 1) . "&year=" . ($week == 1 ? $year - 1 : $year) . "#traininglog";
+    $link_volgende = "user.php?week=" . ($week == 52 ? 1 : $week + 1) . "&year=" . ($week == 52 ? $year + 1 : $year) . "#traininglog";
+    echo "<div class='buttonholder'>";
+    echo "<a href=$link_vorige><button>Previous Week</button></a>";
+    echo "<a href=$link_volgende><button>Next Week</button></a>";
+    echo "</div>";
     echo "</table>";
-
-    $link_vorige = "user.php?week=" . ($week == 1 ? 52 : $week - 1) . "&year=" . ($week == 1 ? $year - 1 : $year);
-    $link_volgende = "user.php?week=" . ($week == 52 ? 1 : $week + 1) . "&year=" . ($week == 52 ? $year + 1 : $year);
-    echo "<a href=$link_vorige>Vorige Week</a>&nbsp";
-    echo "<a href=$link_volgende>Volgende Week</a>&nbsp";
     echo "</section>";
 }
 
@@ -184,6 +188,7 @@ function PrintRec($fitlevel, $lowestfit)
 
     $data2 = GetData("Select lic_naam from fitguideLichaamsdeel");
     $template_tabs = LoadTemplate("user_exercises_tabs");
+    echo "<article class='recs'>";
     echo "<div class='tabs'>";
     foreach ($data2 as $row => $r) {
 
@@ -222,6 +227,7 @@ function PrintRec($fitlevel, $lowestfit)
         $template_exercises = LoadTemplate("user_exercises");
         print ReplaceContentOneRow($data, $template_exercises);
     }
+    print "</article>";
     print "</section>";
 }
 

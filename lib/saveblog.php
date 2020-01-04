@@ -28,11 +28,11 @@ if ( $_POST["savebutton"] == "Save" )
     $sql = "INSERT INTO $tablename SET " . implode( ", " , $sql_body );
 
     if ( ExecuteSQL($sql) ) {
-        $new_url = "$_application_folder$afterinsert?insertOK=true";
+        $new_url = "$_application_folder$afterinsert?insertOK=true#traininglog";
         $_SESSION["msg"][] = "Uw dagboeklog werd correct opgeslagen!" ;
     }
     else {
-        $new_url = "$_application_folder$afterinsert?insertOK=false";
+        $new_url = "$_application_folder$afterinsert?insertOK=false#traininglog";
         $_SESSION["msg"][] = "You have to fill in an exercise";
     }
     }

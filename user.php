@@ -31,7 +31,15 @@ PrintRec($fitlevel, $lowestfit);
 PrintDagBoek();
 PrintUserLog();
     ?>
+
 </main>
+<footer>
+    <p>&copy; 2019 by FitGuide</p>
+</footer>
+<a href="javascript:void(0);" id="goToTop">
+    <span class="fa fa-arrow-circle-up"></span>
+</a>
+
 <script>
     function openCity(evt, cityName) {
         var i, tabcontent, tablinks;
@@ -50,3 +58,4 @@ PrintUserLog();
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
 </script>
+</body>
