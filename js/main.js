@@ -8,10 +8,17 @@ function closeNav() {
     document.getElementById("myNav").style.display = "none";
 }
 
-window.onscroll = function() {
-        document.getElementById("myNav").style.display = "none";
+function scrollClose(x) {
+    if (x.matches) {
+        window.onscroll = function () {
+            document.getElementById("myNav").style.display = "none";
+        }
+    }
 }
 
+var x = window.matchMedia("(max-width: 480px)")
+scrollClose(x);
+x.addEventListener(scrollClose())
 //Smooth scrolling
 
 $('a[href*="#"]')

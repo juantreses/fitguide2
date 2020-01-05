@@ -73,6 +73,43 @@ header {
   }
 }
 
+@media screen and (min-width: $medium-scherm) {
+
+    .navbalk {
+      a.menu {
+        display: none;
+      }
+      .overlay {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: $secondary;
+        overflow: hidden;
+        display: block;
+    }
+
+
+  ul {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          display: block;
+          padding: 14px 20px;
+          @include font($zwart, 400, 100%);
+
+          &:hover,
+          &.active { color: $main; }
+        }
+      }
+
+      .closebtn {
+        display: none;
+      }
+    }
+  }
+
+
 /* Sections Index --------------------------------------------------------------------------------------------------*/
 
 section.section-one {

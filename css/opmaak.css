@@ -153,6 +153,34 @@ header {
       right: 45px;
       font-size: 60px; }
 
+@media screen and (min-width: 600px) {
+  .navbalk a.menu {
+    display: none; }
+  .navbalk .overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #288;
+    overflow: hidden;
+    display: block; }
+  .navbalk ul {
+    display: flex;
+    justify-content: space-between; }
+    .navbalk ul a {
+      display: block;
+      padding: 14px 20px;
+      color: black;
+      font-weight: 400;
+      font-size: 100%;
+      font-family: "IBM Plex Sans", Arial, sans-serif;
+      font-style: normal;
+      line-height: 1.6;
+      text-align: left;
+      letter-spacing: 0; }
+      .navbalk ul a:hover, .navbalk ul a.active {
+        color: #FC3; }
+  .navbalk .closebtn {
+    display: none; } }
 /* Sections Index --------------------------------------------------------------------------------------------------*/
 section.section-one div.pic {
   position: relative;
