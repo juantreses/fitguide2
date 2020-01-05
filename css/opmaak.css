@@ -206,6 +206,7 @@ section.section-two {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: available;
     overflow: hidden; }
   section.section-two h2 {
     position: absolute;
@@ -973,6 +974,22 @@ section.noaccess button {
   section.noaccess button:hover {
     background: #111;
     color: #288; }
+
+/* Editpage ---------------------------------------------------------------------------------------------------------*/
+div.picedit {
+  background: url("../images/fat_loss.jpg") center/cover no-repeat;
+  height: 183px; }
+
+form label {
+  color: #FC3;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  font-style: normal;
+  line-height: 1.6;
+  text-align: left;
+  letter-spacing: 0;
+  margin-left: .5em; }
 
 /* Footer -----------------------------------------------------------------------------------------------------------*/
 footer {

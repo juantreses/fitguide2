@@ -125,6 +125,7 @@ section.section-two {
     position: relative;
     @include flex(row, center, center);
     width: 100%;
+    height: available;
     overflow: hidden;
   }
 
@@ -707,6 +708,19 @@ section.noaccess {
       background: $donker;
       color: $secondary;
     }
+  }
+}
+
+/* Editpage ---------------------------------------------------------------------------------------------------------*/
+
+div.picedit {
+  background: url("../images/fat_loss.jpg") center/cover no-repeat;
+  height: 183px; }
+
+form {
+  label {
+    @include font($main, 700, 1.2rem);
+    margin-left: .5em;
   }
 }
 

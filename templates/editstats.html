@@ -1,0 +1,26 @@
+<div class="picedit">
+</div>
+<form id="edit_form" action="lib/save.php" method="post">
+    <h1>Edit your info here</h1>
+    <input type="hidden" id="formname" name="formname" value="registration_form">
+    <input type="hidden" id="tablename" name="tablename" value="fitguideUser">
+    <input type="hidden" id="pkey" name="pkey" value="usr_id">
+        <ul class="list-unstyled">
+            <li>
+                <label for="usr_username">Username</label>
+                <input type="text" class="input" name="usr_username" value=@@usr_username@@ id="usr_username" required>
+            </li>
+            <li>
+                <label for="usr_lengte">Length</label>
+                <input type="text" id="usr_lengte" placeholder="Name" name="usr_lengte" value="@@usr_lengte@@">
+            </li>
+            <li>
+                <label for="ant_gewicht">Weight</label>
+                <input type="text" id="ant_gewicht" placeholder="Name" name="ant_gewicht" value="@@ant_gewicht@@">
+            </li>
+        </ul>
+        <div class="buttons">
+            <input type="submit" name="savebutton" value="Save">
+        </div>
+
+</form>
