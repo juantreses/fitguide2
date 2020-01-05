@@ -7,7 +7,7 @@ PrintNavBar();
 ?>
 
 
-<main>
+<main class="register">
     <?php
     print LoadTemplate("registratie");
 

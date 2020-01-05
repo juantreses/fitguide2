@@ -154,18 +154,24 @@ header {
       font-size: 60px; }
 
 @media screen and (min-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+
   .navbalk a.menu {
     display: none; }
   .navbalk .overlay {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #288;
+    background-color: #FC3;
     overflow: hidden;
     display: block; }
   .navbalk ul {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-around; }
     .navbalk ul a {
       display: block;
       padding: 14px 20px;
@@ -178,6 +184,7 @@ header {
       text-align: left;
       letter-spacing: 0; }
       .navbalk ul a:hover, .navbalk ul a.active {
+        background-color: #288;
         color: #FC3; }
   .navbalk .closebtn {
     display: none; } }
@@ -674,11 +681,23 @@ form {
   form .personal ul input, form .personal ul select {
     width: unset; }
 
+@media screen and (min-width: 800px) {
+  main.register {
+    display: grid;
+    grid-template: auto/1fr 1fr; }
+    main.register div.picregistratie {
+      height: unset; } }
 /*loginpage------------------------------------------------------------*/
 div.piclogin {
   background: url("../images/loginbanner.png") center/cover no-repeat;
   height: 183px; }
 
+@media screen and (min-width: 800px) {
+  main.login {
+    display: grid;
+    grid-template: auto/1fr 1fr; }
+    main.login div.piclogin {
+      height: unset; } }
 /*Userpage------------------------------------------------------------------*/
 section h3 {
   color: #288;
@@ -721,6 +740,7 @@ section.stats {
     line-height: 1.6;
     text-align: center;
     letter-spacing: 0;
+    text-transform: uppercase;
     margin-bottom: 20px; }
   section.stats h2 {
     padding: 0px 10px;
@@ -957,9 +977,51 @@ section.log form textarea {
     line-height: 1.6;
     text-align: left;
     letter-spacing: 0; }
-section.log img {
-  width: 100%; }
+section.log div.picstretch {
+  background: url("../images/stretching.jpg") center/cover no-repeat;
+  height: 183px; }
 
+@media screen and (min-width: 600px) {
+  section.stats {
+    background-color: #288;
+    text-align: center;
+    margin: 0 auto; }
+    section.stats h2, section.stats h1 {
+      background-color: white;
+      text-align: center;
+      margin-bottom: 0;
+      padding-bottom: 20px; }
+    section.stats article {
+      background-color: white;
+      margin: 0 auto;
+      max-width: 600px; }
+      section.stats article section {
+        max-width: 350px;
+        text-align: left;
+        margin-left: 50px; }
+    section.stats .container {
+      background-color: white;
+      margin: 0;
+      padding: 20px 0px; }
+  section.results .articles {
+    display: grid;
+    grid-template: auto/1fr 1fr 1fr; }
+    section.results .articles img {
+      min-height: 300px;
+      max-height: 300px; }
+  section.exercises .articles {
+    display: grid;
+    grid-template: auto/1fr 1fr; }
+    section.exercises .articles article.explanation {
+      background-color: #EEE; }
+  section.traininglog article {
+    margin: 0 auto;
+    max-width: 500px; }
+  section.log {
+    display: grid;
+    grid-template: auto/1fr 1fr; }
+    section.log div.picstretch {
+      height: unset; } }
 /* No Access -------------------------------------------------------------------------------------------------------*/
 section.noaccess h1 {
   color: #288;

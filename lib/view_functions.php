@@ -111,9 +111,11 @@ function PrintDagBoek()
     ?>
     <section class="traininglog" id="traininglog">
         <h2>My Fitlog</h2>
-        <p>Here you can keep track of your <em>progress</em>. Select which exercise you did on which day and add it to the calendar.
-        You can give a little description how much weight you used or how many sets and repetitions you did.</p>
-        <p>Keeping track of your progress helps you to stay <em>motivated</em>.</p>
+        <article>
+            <p>Here you can keep track of your <em>progress</em>. Select which exercise you did on which day and add it to the calendar.
+            You can give a little description how much weight you used or how many sets and repetitions you did.</p>
+            <p>Keeping track of your progress helps you to stay <em>motivated</em>.</p>
+        </article>
     <table>
         <thead>
         <tr>

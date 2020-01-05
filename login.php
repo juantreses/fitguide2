@@ -9,7 +9,7 @@ ShowMessages();
 BasicHead();
 PrintNavBar();
 ?>
-<main>
+<main class="login">
     <?php
     print LoadTemplate("login");
     ?>
