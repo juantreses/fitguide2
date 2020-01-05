@@ -79,7 +79,7 @@ PrintNavBar();
     </section>
 </main>
 <footer>
-    <p>&copy; 2019 by FitGuide</p>
+    <p>&copy; 2020 by FitGuide</p>
 </footer>
 <a href="javascript:void(0);" id="goToTop">
     <span class="fa fa-arrow-circle-up"></span>

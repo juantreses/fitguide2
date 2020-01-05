@@ -7,11 +7,6 @@ require_once "lib/autoload.php";
 if ( isset($_SESSION['usr']) ) { $_SESSION["msg"][] = "U bent al ingelogd!"; header("Location: index.php"); exit; }
 ShowMessages();
 BasicHead();
-
-?>
-
-<body>
-<?php
 PrintNavBar();
 ?>
 <main>
@@ -20,5 +15,5 @@ PrintNavBar();
     ?>
 </main>
 <footer>
-    <p>&copy; 2019 by FitGuide</p>
+    <p>&copy; 2020 by FitGuide</p>
 </footer>

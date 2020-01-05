@@ -980,7 +980,8 @@ div.picedit {
   background: url("../images/fat_loss.jpg") center/cover no-repeat;
   height: 183px; }
 
-form label {
+form#edit_form label,
+form#test_form label {
   color: #FC3;
   font-weight: 700;
   font-size: 1.2rem;
@@ -990,6 +991,11 @@ form label {
   text-align: left;
   letter-spacing: 0;
   margin-left: .5em; }
+
+/* Testpage ---------------------------------------------------------------------------------------------------------*/
+div.pictest {
+  background: url("../images/old_guy_training.jpeg") center/cover no-repeat;
+  height: 183px; }
 
 /* Footer -----------------------------------------------------------------------------------------------------------*/
 footer {

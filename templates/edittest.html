@@ -1,0 +1,26 @@
+<div class="pictest">
+</div>
+<form id="edit_form" action="lib/savetest.php" method="post">
+    <h1>Take the test again</h1>
+    <input type="hidden" id="formname" name="formname" value="registration_form">
+    <input type="hidden" id="tablename" name="tablename" value="fitguideUser">
+    <input type="hidden" id="pkey" name="pkey" value="usr_id">
+        <ul class="list-unstyled">
+            <li>
+                <label for="tst_situp">How many sit-ups in one minute?</label>
+                <input type="text" name="tst_situp" value=@@tst_situp@@ id="tst_situp">
+            </li>
+            <li>
+                <label for="tst_pushup">How many push-ups in one minute?</label>
+                <input type="text" id="tst_pushup" name="tst_pushup" value="@@tst_pushup@@">
+            </li>
+            <li>
+                <label for="tst_wallsit">How many seconds of wall-sit?</label>
+                <input type="text" id="tst_wallsit" name="tst_wallsit" value="@@tst_wallsit@@">
+            </li>
+        </ul>
+        <div class="buttons">
+            <input type="submit" name="savebutton" value="Save">
+        </div>
+
+</form>

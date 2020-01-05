@@ -717,12 +717,19 @@ div.picedit {
   background: url("../images/fat_loss.jpg") center/cover no-repeat;
   height: 183px; }
 
-form {
+form#edit_form,
+form#test_form {
   label {
     @include font($main, 700, 1.2rem);
     margin-left: .5em;
   }
 }
+
+/* Testpage ---------------------------------------------------------------------------------------------------------*/
+
+div.pictest {
+  background: url("../images/old_guy_training.jpeg") center/cover no-repeat;
+  height: 183px; }
 
 
 /* Footer -----------------------------------------------------------------------------------------------------------*/

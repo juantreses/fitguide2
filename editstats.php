@@ -19,5 +19,5 @@ PrintNavBar();
     ?>
 </main>
 <footer>
-    <p>&copy; 2019 by FitGuide</p>
+    <p>&copy; 2020 by FitGuide</p>
 </footer>
