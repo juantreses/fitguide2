@@ -29,7 +29,7 @@ if ( $_POST["savebutton"] == "Save" )
 
     if ( ExecuteSQL($sql) ) {
         $new_url = "$_application_folder$afterinsert?insertOK=true#traininglog";
-        $_SESSION["msg"][] = "Uw dagboeklog werd correct opgeslagen!" ;
+        $_SESSION["msg"][] = "Your exercise has been added to the calendar" ;
     }
     else {
         $new_url = "$_application_folder$afterinsert?insertOK=false#traininglog";

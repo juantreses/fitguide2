@@ -9,12 +9,12 @@ if ( $formname == "login_form" AND $buttonvalue == "Log in" )
 {
     if ( ControleLoginWachtwoord( $_POST['usr_username'], $_POST['usr_wachtwoord'] ) )
     {
-        $_SESSION["msg"][] = "Welkom, " . $_SESSION['usr']['usr_voornaam'] . "!" ;
+        $_SESSION["msg"][] = "Welcome, " . $_SESSION['usr']['usr_voornaam'] . "!" ;
         header("Location: ". $_application_folder . "user.php");
     }
     else
     {
-        $_SESSION["msg"][] = "Sorry! Verkeerde login of wachtwoord!";
+        $_SESSION["msg"][] = "Sorry! Wrong login or password!";
         header("Location: ". $_application_folder . "login.php");
     }
 }

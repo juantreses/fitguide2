@@ -5,6 +5,6 @@ unset($_SESSION);
 
 session_start();
 session_regenerate_id();
-$_SESSION["msg"][] = "U bent afgemeld!";
+$_SESSION["msg"][] = "You are logged of";
 header("Location: ../index.php");
 ?>

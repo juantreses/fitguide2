@@ -11,25 +11,25 @@ $now = date("Y-m-d H:i:s",time());
 if ( $formname == "registration_form" )
 {
     //controle of gebruiker al bestaat
-    $sql = "SELECT * FROM fitguideUser WHERE usr_username='" . $_POST['usr_username'] . "' " . "OR usr_email='" . $_POST['usr_email'] . "'";
+    $sql = "SELECT * FROM fitguideUser WHERE usr_email='" . $_POST['usr_email'] . "'";
     $data = GetData($sql);
     if ( count($data) > 0 ) {
-        $_SESSION["msg"][] = "Deze gebruiker bestaat reeds! Gelieve een andere login te gebruiken.";
+        $_SESSION["msg"][] = "This email is already in use.";
         header("Location: ". $_application_folder . "registreer.php");
         exit();
     }
 
     //controle wachtwoord minimaal 8 tekens
     if ( strlen($_POST["usr_wachtwoord"]) < 8 ) {
-        $_SESSION["msg"][] = "Uw wachtwoord moet minstens 8 tekens bevatten!";
+        $_SESSION["msg"][] = "Your password needs to be 8 characters long";
         header("Location: ". $_application_folder . "user.php");
         exit();
     }
 
     //controle geldig e-mailadres
     if (!filter_var($_POST["usr_email"], FILTER_VALIDATE_EMAIL)) {
-        $_SESSION["msg"][] ="Ongeldig email formaat voor login";
-        header("Location: ". $_application_folder . "user.php");
+        $_SESSION["msg"][] ="This is not a valid e-mail";
+        header("Location: ". $_application_folder . "registreer.php");
         exit();
     }
 
@@ -65,7 +65,7 @@ if ( $formname == "registration_form" )
 
     if (ExecuteSQL($sql2) and ExecuteSQL($sql3) )
     {
-        $_SESSION["msg"][] = "Bedankt voor uw registratie!" ;
+        $_SESSION["msg"][] = "Thank you for your registration!" ;
 
         if ( ControleLoginWachtwoord( $_POST["usr_username"] , $_POST["usr_wachtwoord"]) )
         {
@@ -74,7 +74,7 @@ if ( $formname == "registration_form" )
     }
     else
     {
-        $_SESSION["msg"][] = "Sorry, er liep iets fout. Uw gegevens werden niet goed opgeslagen" ;
+        $_SESSION["msg"][] = "Sorry, something went wrong. Your data was not stored." ;
     }
 }
 ?>
