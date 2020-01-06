@@ -22,7 +22,7 @@ if ( $formname == "registration_form" )
     //controle wachtwoord minimaal 8 tekens
     if ( strlen($_POST["usr_wachtwoord"]) < 8 ) {
         $_SESSION["msg"][] = "Your password needs to be 8 characters long";
-        header("Location: ". $_application_folder . "user.php");
+        header("Location: ". $_application_folder . "registreer.php");
         exit();
     }
 

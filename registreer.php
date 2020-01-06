@@ -2,6 +2,7 @@
 $register = true;
 require_once "lib/autoload.php";
 
+ShowMessages();
 BasicHead();
 PrintNavBar();
 ?>
