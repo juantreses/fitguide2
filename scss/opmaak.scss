@@ -472,6 +472,8 @@ form {
   }
 }
 
+
+
 /*loginpage------------------------------------------------------------*/
 
 
@@ -844,6 +846,16 @@ section.noaccess {
     }
   }
 }
+@media screen and (min-width: $breed-scherm) {
+  main.register {
+    display: grid;
+    grid-template: auto/1fr 1fr;
+
+    div.picregistratie {
+      height: unset;
+    }
+  }
+}
 
 /* Editpage ---------------------------------------------------------------------------------------------------------*/
 
@@ -859,11 +871,33 @@ form#test_form {
   }
 }
 
+@media screen and (min-width: $breed-scherm) {
+  main.stats {
+    display: grid;
+    grid-template: auto/1fr 1fr;
+
+    div.picedit {
+      height: unset;
+    }
+  }
+}
+
 /* Testpage ---------------------------------------------------------------------------------------------------------*/
 
 div.pictest {
   background: url("../images/old_guy_training.jpeg") center/cover no-repeat;
   height: 183px; }
+
+@media screen and (min-width: $breed-scherm) {
+  main.test {
+    display: grid;
+    grid-template: auto/1fr 1fr;
+
+    div.pictest {
+      height: unset;
+    }
+  }
+}
 
 
 /* Footer -----------------------------------------------------------------------------------------------------------*/

@@ -6,7 +6,7 @@ PrintNavBar();
 ?>
 
 
-<main>
+<main class="test">
     <?php
     $sql = "select tst_pushup, tst_situp, tst_wallsit from fitguideTest 
             where tst_usr_id= " . $_SESSION['usr']['usr_id'] . " 

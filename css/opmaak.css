@@ -1065,6 +1065,12 @@ section.noaccess button {
     background: #111;
     color: #288; }
 
+@media screen and (min-width: 800px) {
+  main.register {
+    display: grid;
+    grid-template: auto/1fr 1fr; }
+    main.register div.picregistratie {
+      height: unset; } }
 /* Editpage ---------------------------------------------------------------------------------------------------------*/
 div.picedit {
   background: url("../images/fat_loss.jpg") center/cover no-repeat;
@@ -1082,11 +1088,23 @@ form#test_form label {
   letter-spacing: 0;
   margin-left: .5em; }
 
+@media screen and (min-width: 800px) {
+  main.stats {
+    display: grid;
+    grid-template: auto/1fr 1fr; }
+    main.stats div.picedit {
+      height: unset; } }
 /* Testpage ---------------------------------------------------------------------------------------------------------*/
 div.pictest {
   background: url("../images/old_guy_training.jpeg") center/cover no-repeat;
   height: 183px; }
 
+@media screen and (min-width: 800px) {
+  main.test {
+    display: grid;
+    grid-template: auto/1fr 1fr; }
+    main.test div.pictest {
+      height: unset; } }
 /* Footer -----------------------------------------------------------------------------------------------------------*/
 footer {
   padding: 2em;

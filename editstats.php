@@ -6,7 +6,7 @@ PrintNavBar();
 ?>
 
 
-<main>
+<main class="stats">
     <?php
     $sql = "select usr_username, usr_lengte, ant_gewicht from fitguideUser
             inner join fitguideAntropometrie fA on fitguideUser.usr_id = fA.ant_usr_id
