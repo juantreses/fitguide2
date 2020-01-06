@@ -1,3 +1,10 @@
+window.onload = function() {
+
+    document.getElementById('snackbar').className = 'show';
+
+    setTimeout(function(){ document.getElementById('snackbar').className = '' }, 3000);
+};
+
 /* Open */
 function openNav() {
     document.getElementById("myNav").style.display = "flex";
@@ -80,11 +87,5 @@ $(document).ready(function(){
 
 
 
-function ShowMessages() {
 
-    var x = document.getElementsByClassName("message");
 
-    x.className = "show";
-
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-}
