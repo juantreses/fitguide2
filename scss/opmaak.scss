@@ -146,6 +146,7 @@ section.section-one {
       }
 
       p {
+        font-size:1.1rem;
         margin-left: 20px;
       }
     }
@@ -234,13 +235,20 @@ section.section-three {
         background-color: $secondary;
         border: none;
         color: white;
-        padding: 18px 38px;
+        padding: 28px 48px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 19px;
         margin: 4px 2px;
         cursor: pointer;
+        font-weight: 700;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+
+        &:hover {
+          background: $donker;
+          color: $secondary;
+        }
       }
     }
   }
@@ -348,7 +356,7 @@ section.section-four {
   visibility: hidden;
   min-width: 250px;
   margin-left: -125px;
-  background-color: #333;
+  background-color: $secondary;
   color: #fff;
   text-align: center;
   border-radius: 2px;
@@ -516,6 +524,7 @@ div.piclogin {
   main.login {
     display: grid;
     grid-template: auto/1fr 1fr;
+    height: 70vh;
 
     div.piclogin {
       height: unset;

@@ -223,6 +223,7 @@ section.section-one div.pic {
       text-transform: uppercase;
       margin-left: 20px; }
     section.section-one div.pic .overlay p {
+      font-size: 1.1rem;
       margin-left: 20px; }
 
 @media screen and (min-width: 600px) {
@@ -319,13 +320,18 @@ section.section-three div.pic {
       background-color: #288;
       border: none;
       color: white;
-      padding: 18px 38px;
+      padding: 28px 48px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
-      font-size: 19px;
       margin: 4px 2px;
-      cursor: pointer; }
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.3rem;
+      text-transform: uppercase; }
+      section.section-three div.pic .overlay button:hover {
+        background: #111;
+        color: #288; }
 
 section.section-four {
   background: #288; }
@@ -525,7 +531,7 @@ section.section-four {
   visibility: hidden;
   min-width: 250px;
   margin-left: -125px;
-  background-color: #333;
+  background-color: #288;
   color: #fff;
   text-align: center;
   border-radius: 2px;
@@ -734,7 +740,8 @@ div.piclogin {
 @media screen and (min-width: 800px) {
   main.login {
     display: grid;
-    grid-template: auto/1fr 1fr; }
+    grid-template: auto/1fr 1fr;
+    height: 70vh; }
     main.login div.piclogin {
       height: unset; } }
 /*Userpage------------------------------------------------------------------*/
